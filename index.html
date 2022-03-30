@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <!-------------- CDN FONT AWESOME -------------->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-------------- GOOGLE FONTS LINK -------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+     <!-------------- CDN AOS -------------->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-------------- ARCHIVO CSS -------------->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Physical Point</title>
+</head>
+<body>
+
+    <!-------------- HEADER EMPIEZA --------------->
+
+    <header class="header" id="header" >
+        <a class="logo" href="#inicio">PHYSICAL POINT</a>
+        <nav class="nav" >
+            <ul class="nav-bar" id="nav">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="pages/productos.html">Productos</a></li>
+                <li class="link-clases"><a href="pages/clases.html">Clases</a>
+                    <ul class="desplegable">
+                        <li><a href="">CrossFit</a></li>
+                        <li><a href="">Kangoo Jump</a></li>
+                        <li><a href="">Boxeo</a></li>
+                        <li><a href="">Yoga</a></li>
+                        <li><a href="">Spining</a></li>
+                        <li><a href="">Body Pump</a></li>
+                        <li><a href="">Zumba</a></li>
+                    </ul>
+                </li>                                              
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+            <div class="menu" id="open-close">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+                        
+        </nav> 
+              
+        <nav class="lat-nav" id="lat-nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="./pages/productos.html">Productos</a></li>
+            <li><a href="./pages/clases.html">Clases</a></li>                                            
+            <li><a href="./pages/contacto.html">Contacto</a></li>
+        </nav>
+
+        <a class='whatsapp' href="https://wa.me/1140895192?text=Hola,%20necesito%20informacion" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+               
+    </header>  
+
+    
+
+    <!-------------- HEADER TERMINA -------------->
+
+    <section id="inicio" class="hero">       
+
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <div class="img">
+                        <img src="./img/slide.jpg" alt="">
+                    </div>
+                    <div class="hero-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                        <span>Empieza ya</span>
+                        <h1>Te ayudamos a encontrar <br> la mejor version de ti mismo.</h1>
+                        <button class="btn" href="#" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000">¡Empieza ya!</button> 
+                                
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="img">
+                        <img src="./img/slide-2.jpg" alt="">
+                    </div>
+                    <div class="hero-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                        <span>Empieza ya</span>
+                        <h1>Te ayudamos a encontrar <br> la mejor version de ti mismo.</h1>
+                        <button href="#" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000" class="btn">¡Empieza ya!</button>                
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="img">
+                        <img src="./img/slide-3.jpg" alt="">
+                    </div>
+                    <div class="hero-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                        <span>Empieza ya</span>
+                        <h1>Te ayudamos a encontrar <br> la mejor version de ti mismo.</h1>
+                        <button href="#" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000" class="btn">¡Empieza ya!</button>                
+                    </div>
+                </div>
+               
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div> 
+                   
+        </div>
+        
+
+    </section> 
+
+   
+    
+      
+    
+    <!-------------- NOSOTROS EMPIEZA -------------->
+
+    <main>
+        <section class="nosotros" >
+            <div class="container-left" data-aos="fade-right" data-aos-duration="1000">
+                <img src="./img/nosotros.jpg"  alt="sport" >
+            </div>            
+            <div class="container-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" >
+                <span class="span">Sobre nosotros:</span>
+                <h3 class="heading">Veni a <span>conocernos</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, mollitia eaque. Aspernatur perferendis consectetur quibusdam blanditiis culpa voluptate enim ducimus.</p>
+                <div class="container-box">
+                    <div class="box">
+                        <h4><i class="fas fa-check" ></i>Vida sana</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                    <div class="box">
+                        <h4><i class="fas fa-check" ></i>Vida sana</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                    <div class="box">
+                        <h4><i class="fas fa-check" ></i>Vida sana</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                    <div class="box">
+                        <h4><i class="fas fa-check" ></i>Vida sana</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </div>                    
+                    
+                </div>
+                <button class="btn" >Leer mas</button>               
+
+            </div>
+        </section>
+        
+        
+
+        <!-------------- NOSOTROS TERMINA -------------->
+
+        <!-------------- SERVICIOS EMPIEZA -------------->
+
+        <section class="servicios">
+            <div class="servicios-container" data-aos="fade-left" data-aos-duration="1000">
+                <div class="content-servicios-left">
+                    <h3 >¿Porque elegirnos?</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe pariatur suscipit molestiae deleniti nam dolor labore vel delectus incidunt ullam nisi totam alias odit, quos, sunt omnis numquam ex accusantium!</p>
+                    <button class="btn" href="">Leer mas</button>
+
+                </div>
+                <div class="content-servicios-right">
+                    <article class="category">
+                        <span><i class="fa-solid fa-dumbbell"></i></span>
+                        <h4>Musculacion</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </article>
+                    <article class="category">
+                        <span><i class="fa-solid fa-person-biking"></i></span>
+                        <h4>Clases</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </article>
+                    <article class="category">
+                        <span><i class="fa-solid fa-person-running"></i></span>
+                        <h4>Asesoramiento</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </article>
+                    <article class="category">
+                        <span><i class="fa-solid fa-people-carry-box"></i></i></span>
+                        <h4>Eco-friendly</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </article>
+                    <article class="category">
+                        <span><i class="fa-solid fa-solar-panel"></i></span>
+                        <h4>Cama solar</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </article>
+                    <article class="category">
+                        <span><i class="fa-solid fa-shirt"></i></span>
+                        <h4>Ahorra</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-------------- SERVICIOS TERMINA -------------->
+
+         <!-------------- PROFESORES EMPIEZA -------------->
+
+         <section class="trainers">
+            <div class="trainers-container">
+                <div  class="border" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="heading">Nuestros <span>Profesores</span></h3>
+                </div>
+                <div class="trainers-container-cards">
+                    <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" >
+                        <div class="card-img">
+                            <img src="./img/teacher.jpg" alt="">
+                        </div>                       
+                        <div class="card-profile">
+                            <span>Profesor de Calistenia:</span>
+                            <h4>Juan Manuel Mosquella</h4> 
+                                                       
+                        </div>
+                        <div class="social-media">
+                            <a href="" class="fab fa-facebook" ></a>
+                            <a href="" class="fab fa-twitter" ></a>
+                            <a href="" class="fab fa-linkedin" ></a>
+                        </div>
+                    </div>
+                   
+                    <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="card-img">
+                            <img src="./img/teacher-2.jpg" alt="">
+                        </div>                       
+                        <div class="card-profile">
+                            <span>Profesora de Spining:</span>
+                            <h4>Daiana Hernandez</h4>                            
+                        </div>
+                        <div class="social-media">
+                            <a href="" class="fab fa-facebook" ></a>
+                            <a href="" class="fab fa-twitter" ></a>
+                            <a href="" class="fab fa-linkedin" ></a>
+                        </div>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="card-img">
+                            <img src="./img/teacher-3.jpg" alt="">
+                        </div>                       
+                        <div class="card-profile">
+                            <span>Profesora de CrossFit:</span>
+                            <h4>Julieta Fuentes</h4>                            
+                        </div>
+                        <div class="social-media">
+                            <a href="" class="fab fa-facebook" ></a>
+                            <a href="" class="fab fa-twitter" ></a>
+                            <a href="" class="fab fa-linkedin" ></a>
+                        </div>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="card-img">
+                            <img src="./img/teacher-4.jpg" alt="">
+                        </div>                       
+                        <div class="card-profile">
+                            <span>Profesor de Musculacion:</span>
+                            <h4>Matias Ezequiel</h4>                            
+                        </div>
+                        <div class="social-media">
+                            <a href="" class="fab fa-facebook" ></a>
+                            <a href="" class="fab fa-twitter" ></a>
+                            <a href="" class="fab fa-linkedin" ></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-------------- PROFESORES TERMINA -------------->
+
+        <!-------------- PLANES DE PAGO EMPIEZA -------------->
+
+
+        <section class="banner">
+            <div class="banner-content">
+                
+                <h3>Ahorra hasta un 50% en tu primer mes</h3>
+                <p>Empeza ya y ganale a la inflacion con nuestros increibles precios de cuotas congeladas</p>                
+                
+            </div>
+        </section>
+
+        <section class="offers">
+                   
+            <div class="flex-container">
+                <div class="price" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                    <div class="price-content">
+                        <h3>Plan Gold</h3>
+                         <span>ARS$</span>
+                         <span class="nro">4.000</span>
+                         <p>Plan duradero por 1 mes</p>                         
+                         <button class="btn">Añadir al carrito</button><hr>                                          
+                    </div>
+                    <ul>
+                     <li><i class="fas fa-check" ></i>Sala de maquinas</li>
+                     <li><i class="fas fa-check" ></i>Vestidores y duchas</li>
+                     <li><i class="fas fa-check" ></i>Todas las clases</li>
+                     <li><i class="fas fa-check" ></i>Asesoramiento constante</li>
+                     <li><i class="fas fa-check" ></i>Plan nutricional</li>
+                    </ul>
+                </div>
+                <div class="price" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                    <div class="price-content">
+                        <h3>Plan Gold</h3>
+                         <span>ARS$</span>
+                         <span class="nro">4.000</span>
+                         <p>Plan duradero por 1 mes</p>                         
+                         <button class="btn">Añadir al carrito</button><hr>                                          
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-check" ></i>Sala de maquinas</li>
+                        <li><i class="fas fa-check" ></i>Vestidores y duchas</li>
+                        <li><i class="fas fa-check" ></i>Todas las clases</li>
+                        <li><i class="fas fa-check" ></i>Asesoramiento constante</li>
+                        <li><i class="fas fa-check" ></i>Plan nutricional</li>
+                    </ul>
+                </div>
+                <div class="price" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="price-content">
+                        <h3>Plan Anual</h3>
+                         <span>ARS$</span>
+                         <span class="nro">40.000</span>
+                         <p>Plan duradero por 1 año</p>                         
+                         <button class="btn">Añadir al carrito</button><hr>
+                                         
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-check" ></i>Sala de maquinas</li>
+                        <li><i class="fas fa-check" ></i>Vestidores y duchas</li>
+                        <li><i class="fas fa-check" ></i>Todas las clases</li>
+                        <li><i class="fas fa-check" ></i>Asesoramiento constante</li>
+                        <li><i class="fas fa-check" ></i>Plan nutricional</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </section>        
+        
+        <!-------------- PLANES DE PAGO TERMINAN --------------> 
+
+        <!-------------- TESTIMONIOS COMIENZAN --------------> 
+        
+        <section class="testimonials">
+            <div class="container-testimonials">
+                <div class="box-testimonial">
+                    <i class="fa-solid fa-quote-right"></i>
+                    <div class="content-testimonials">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint beatae sed quia, nemo quibusdam reiciendis  nulla atque. Sunt mollitia in b.</p>
+                        <div class="profile">
+                            <img src="./img/image-kira.jpg" alt="">
+                            <h4>Denise Lopez</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-testimonial">
+                    <i class="fa-solid fa-quote-right"></i>
+                    <div class="content-testimonials">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint beatae sed quia, nemo quibusdam reiciendis . Sunt mollitia in .</p>
+                        <div class="profile">
+                            <img src="./img/image-jonathan.jpg" alt="">
+                            <h4>Lucas Teran</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-testimonial">
+                    <i class="fa-solid fa-quote-right"></i>
+                    <div class="content-testimonials">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint beatae sed quia, nemo quibusdam reiciendis omnis ad natus dolores ipsum ut at .</p>
+                        <div class="profile">
+                            <img src="./img/image-patrick.jpg" alt="">
+                            <h4>Jualian Perez</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section> 
+
+        <!-------------- TESTIMONIOS TEMRINAN -------------->
+
+        <!-------------- BLOGS INICIAN -------------->
+
+
+
+        <section class="blog">
+            <div class="swiper blog-slider">
+                <div class="border" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="heading">Nuestro <span>Blog:</span></h3>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide">
+                        <div class="post-img">
+                            <img src="./img/blog-1.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <i class="far fa-clock"></i>
+                            <span>24 de Febrero, 2022</span>
+                            <h3 class="blog-title">No tengas miedo, entrena pesado</h3>                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repudiandae.</p>                        
+                            <div class="links">
+                                <a href="" class="user">
+                                 <i class="fa-solid fa-user"></i>
+                                 <span>Por Juan</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-comment"></i>
+                                 <span>(45)</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-share-square"></i>
+                                 <span>(12)</span>
+                                </a>
+                            </div>                                
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <div class="post-img">
+                            <img src="./img/blog-2.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <i class="far fa-clock"></i>
+                            <span>24 de Febrero, 2022</span>
+                            <h3 class="blog-title">Rodeate de gente amigos</h3>                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repudiandae.</p>                        
+                            <div class="links">
+                                <a href="" class="user">
+                                 <i class="fa-solid fa-user"></i>
+                                 <span>Por Juan</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-comment"></i>
+                                 <span>(45)</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-share-square"></i>
+                                 <span>(12)</span>
+                                </a>
+                            </div>                                
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <div class="post-img">
+                            <img src="./img/blog-3.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <i class="far fa-clock"></i>
+                            <span>24 de Febrero, 2022</span>
+                            <h3 class="blog-title">Importancia de descansar bien</h3>                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repudianda.</p>                        
+                            <div class="links">
+                                <a href="" class="user">
+                                 <i class="fa-solid fa-user"></i>
+                                 <span>Por Juan</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-comment"></i>
+                                 <span>(45)</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-share-square"></i>
+                                 <span>(12)</span>
+                                </a>
+                            </div>                                
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <div class="post-img">
+                            <img src="./img/blog-4.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <i class="far fa-clock"></i>
+                            <span>24 de Febrero, 2022</span>
+                            <h3 class="blog-title">Correr al aire libre</h3>                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repudiandae</p>                        
+                            <div class="links">
+                                <a href="" class="user">
+                                 <i class="fa-solid fa-user"></i>
+                                 <span>Por Juan</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-comment"></i>
+                                 <span>(45)</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-share-square"></i>
+                                 <span>(12)</span>
+                                </a>
+                            </div>                                
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <div class="post-img">
+                            <img src="./img/blog-5.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <i class="far fa-clock"></i>
+                            <span>24 de Febrero, 2022</span>
+                            <h3 class="blog-title">Los abdominales en la cocina</h3>                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repudiandae</p>                        
+                            <div class="links">
+                                <a href="" class="user">
+                                 <i class="fa-solid fa-user"></i>
+                                 <span>Por Juan</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-comment"></i>
+                                 <span>(45)</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-share-square"></i>
+                                 <span>(12)</span>
+                                </a>
+                            </div>                                
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <div class="post-img">
+                            <img src="./img/blog-6.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <i class="far fa-clock"></i>
+                            <span>24 de Febrero, 2022</span>
+                            <h3 class="blog-title">La calidad del sueño</h3>                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repudiandae.</p>                        
+                            <div class="links">
+                                <a href="" class="user">
+                                 <i class="fa-solid fa-user"></i>
+                                 <span>Por Juan</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-comment"></i>
+                                 <span>(45)</span>
+                                </a>
+                                <a href="" class="icon">
+                                 <i class="far fa-share-square"></i>
+                                 <span>(12)</span>
+                                </a>
+                            </div>                                
+                            
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="swiper-pagination"></div>     
+                
+            </div>
+            
+        </section> 
+        
+        <!-------------- BLOGS TERMINAN -------------->
+
+        <!-------------- FAQ INICIAN -------------->
+
+
+        <section class="FAQ ">
+            <div class="container">                
+                <div class="heading">
+                    <h2>Preguntas frecuentes</h2>
+                    <p>¿Te quedaron dudas? Estas son algunas de las preguntas mas frecuentes.</p>
+                </div>
+                <div class="row">
+                    <div class="question">
+                        <h3>Lorem ipsum dolor sit amet consectetur.?</h3>
+                        <i class="fa-solid fa-angle-down" id="arrow"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quod recusandae ab autem pariatur explicabo odit at laudantium animi quo ad adipisci eaque obcaecati sunt fugit saepe! Ratione, quia qui!</p>
+                </div>
+                <div class="row">
+                    <div class="question">
+                        <h3>Lorem ipsum dolor sit amet consectetur.?</h3>
+                        <i class="fa-solid fa-angle-down" id="arrow"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quod recusandae ab autem pariatur explicabo odit at laudantium animi quo ad adipisci eaque obcaecati sunt fugit saepe! Ratione, quia qui!</p>
+                </div>
+                <div class="row">
+                    <div class="question">
+                        <h3>Lorem ipsum dolor sit amet consectetur.?</h3>
+                        <i class="fa-solid fa-angle-down" id="arrow"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quod recusandae ab autem pariatur explicabo odit at laudantium animi quo ad adipisci eaque obcaecati sunt fugit saepe! Ratione, quia qui!</p>
+                </div>
+                <div class="row">
+                    <div class="question">
+                        <h3>Lorem ipsum dolor sit amet consectetur.?</h3>
+                        <i class="fa-solid fa-angle-down" id="arrow"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quod recusandae ab autem pariatur explicabo odit at laudantium animi quo ad adipisci eaque obcaecati sunt fugit saepe! Ratione, quia qui!</p>
+                </div>        
+
+            </div>
+        </section> 
+           
+        <!-------------- FAQ TERMINAN -------------->
+        
+    </main>
+
+    <!-------------- FOOTER -------------->
+
+    <footer class="footer">
+        <div class="flex-container">            
+            <div class="info">
+                <h4>Veni a conocernos</h4>
+                <p>Physical Point</p>
+                <p>Argentina</p>
+                <p>Avellaneda-Wilde</p>
+                <p>Mitre 6480</p>
+                <p>11 4227-5923</p> 
+            </div>
+            <div class="content-left">
+                <h4>Contenido</h4>
+                <p>Seguinos en nuestras redes sociales para estar siempre motivado</p>
+                <ul>
+                    <i class="fa-brands fa-facebook"><a href=""></a></i>
+                    <i class="fa-brands fa-twitter"><a href=""></a></i>  
+                    <i class="fa-brands fa-instagram"><a href=""></a></i>
+                </ul>                
+            </div>
+            <div>
+                <div class="content-right">
+                    <h4>¿Te quedaron dudas?</h4>
+                    <input type="email" placeholder="Ingresa tu mensaje">
+                </div>
+                
+                <div class="info">
+                    <h4>Titutlo de informacion</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Commodi<br>  
+                     eius vero illo error hic numquam earum tempore aperiam?</p>
+                </div>
+            </div>                   
+            
+        </div>
+        <div class="copyright">
+            <p>Todos los derechos reservados  2022</p>
+        </div>      
+        
+    </footer>
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        </script>
+    
+</body>
+</html>

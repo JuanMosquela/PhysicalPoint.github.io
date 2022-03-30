@@ -1,0 +1,1347 @@
+@import "global.scss";
+@import "variables.scss";
+
+// ESTILOS DE HEADER
+
+.header{
+    min-height: 70px;        
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;  
+    z-index: 100;    
+    background-color: $black; 
+    
+    @media(max-width: 600px){
+        padding: 0 2%;
+    }
+    
+    .logo{
+        color: $white;
+        padding: .8rem;
+        font-weight: 600;
+        border: 2px solid $orange;
+
+        @media (max-width:600px){
+            font-size:.5rem;
+            padding:0.5rem;
+             
+        }
+    }
+
+    .menu{
+        display: none;  
+        
+        @media(max-width: 978px){
+            display: block;        
+            position: absolute;
+            top: 0;
+            right: 10px;
+            padding: 1rem;
+            font-size: 2rem;
+            cursor:pointer;
+            color: $white;
+        }
+    } 
+    
+    
+
+    .lat-nav{
+        display: block;
+        position: absolute; 
+        width: 300px;
+        background-color: $black;      
+        top: 60px;
+        right: 0;
+        padding: 0.5rem 1rem;
+        transform: translateX(300px); 
+        box-shadow: -1px 1px 78px -15px rgba(0,0,0,0.15); 
+
+        &.active{
+            transform:translateX(0)
+        }
+        
+        li a{
+            font-weight: 600;
+            color: $white-letter;
+            border: $border 1px solid;
+            font-size: 1.2rem;
+            display: block;
+            margin: 15px 0;
+            padding: 0.5rem;
+
+            &:hover{
+                color: $white;
+                border: 2px solid $white;
+            }
+        }
+    }
+
+    .nav-bar{
+        display:flex; 
+        
+        @media(max-width: 978px){
+            display: none;
+        }
+        
+        li{    
+            padding: 0 1.5rem;            
+            font-weight: 600; 
+                       
+            .desplegable{   
+                display:none; 
+                position: absolute;      
+                background-color: $black;                 
+                
+                li{
+                    padding: 1rem 0.5rem;
+
+                    &:hover{
+                        background-color: $bg;
+                    }
+                }              
+            }
+
+            &:hover .desplegable{
+                display: block;
+            }
+            
+            a{
+                color: $white-letter;
+
+                &:hover{
+                    color: $white;
+                }
+            }            
+        }       
+    } 
+
+    .whatsapp{    
+        position: fixed;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        font-size:2.4rem;
+        right: 2rem; 
+        bottom: 8%;
+        color: $white;
+        background-color: $whatsapp;
+        border-radius: 100%;
+        width: 4rem;
+        height: 4rem;
+        box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+        z-index: 200;
+    
+        &:hover{
+            color:$whatsapp;
+            background-color: $white;
+        }
+    
+              
+    }
+      
+}
+
+
+
+//ESTILOS DE HERO
+
+.hero{
+    padding: 0;
+    margin-bottom: 2rem;
+
+    .hero-slider{
+        position:relative;
+
+        .swiper-pagination{
+            position: absolute;
+            bottom: 6rem;
+            transform: scale(1.5);
+        }        
+
+        .swiper-pagination-bullet{
+            height: 1rem;
+            width: 1rem;    
+            background-color: $orange;
+            border-radius: 0;
+
+            @media(max-width:500px){
+                display: none;
+            }
+        }
+
+        .swiper-button-next, 
+        .swiper-button-prev {
+            color: $white;
+            padding: 0 2rem;
+            transform: scale(.8);
+
+            @media(max-width: 678px){
+                display: none;
+            }
+
+            
+        }       
+
+        .swiper-slide {
+
+            .img{
+                width: 100%;
+                height: 100%;
+                height: 75vh;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .hero-content{    
+                position: absolute;
+                top: 30%;
+                left: 8%; 
+                
+                @media(max-width: 678px){
+                    text-align: center;
+                    padding:  1rem;                    
+                }
+                
+                span{
+                    color: $orange;
+                    margin-bottom: 2rem;
+                    font-weight: 800;
+                }
+
+                h1{
+                    font-size: $fs-h1;
+                    color: $white;
+                    margin-top: 1rem;
+                    padding-bottom: $fs-h1;
+
+                    @media(max-width: 978px){
+                        font-size: $fs-h3;
+                    }
+                    @media(max-width: 678px){
+                        font-size: 2rem;
+                    }
+                }
+
+                .btn{
+                    @media(max-width:678px){
+                        display: none;
+                    }
+                }
+                
+            }
+        }
+    }
+
+   
+}
+
+
+
+// ESTILOS DE NOSOTROS
+
+.nosotros{
+    min-height: 80vh;
+    display: flex;       
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    background-color: $bg;
+
+    @media(max-width:1400px){
+        flex-wrap: wrap;
+    }
+    @media(max-width:678px){
+        padding: 0 2%;
+    }
+
+    .container-left{
+        flex: 1 1 40rem; 
+        position:relative;
+        z-index: 1; 
+        box-shadow: -1px 1px 78px -15px rgba(0,0,0,0.15);
+
+        &::before{
+            content: "";
+            position: absolute;    
+            z-index: -1;
+            width: 10rem;
+            height: 10rem;
+            background-color: $orange;
+            top: 0;
+            left: 0;
+            transition: .3s;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;    
+            z-index: -1;
+            width: 10rem;
+            height: 10rem;
+            background-color: $orange;
+            bottom: 0;
+            right: 0;
+            transition: 0.3s;
+        }
+
+        img{
+            padding: 0.5rem;
+            width: 100%; 
+
+        }
+    }
+
+    .container-right{
+        flex: 1 1 40rem;        
+        padding: 1.5rem;        
+        border-radius: 0.4rem;
+        box-shadow: 2px 5px 70px 10px rgba(0,0,0,0.30);
+
+        .span{
+            color: $orange;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        h3{
+            padding: 1.2rem 0;
+            text-align: left;
+        }
+
+        .container-box{
+            display: grid;
+            grid-template-columns: 1fr 1fr;    
+            gap: 1.5rem;
+            padding: 1rem 0;
+
+            @media(max-width:600px){
+                grid-template-columns: 1fr
+            }
+
+            .box{
+                padding: 1rem 0;
+
+                @media(max-width:600px){
+                    padding: 0;
+                }
+
+                h4{
+                    color: $white;
+                    margin-bottom: 1rem;
+                }
+
+                i{
+                    margin-right: 10px;
+                    color: $orange;
+                }
+
+                p{
+                    line-height: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+//ESTILOS DE SERVICIOS
+
+.servicios{
+    background-image: radial-gradient($bg,$black);  
+    min-height: 30rem;  
+    margin-bottom: 2rem;   
+
+    .servicios-container{
+        display: flex;
+        justify-content:space-around;
+        align-items:center;
+        padding: 2rem 0;
+
+        @media(max-width: 1400px){
+            flex-wrap: wrap;
+        }        
+
+        .content-servicios-left{
+            flex: 1 1 40rem;
+            padding-right: 2rem;
+
+            @media(max-width:500px){
+                padding-right: 0;
+            }
+
+            h3{
+                font-size: $fs-h3;
+                color: $white;
+
+                @media(max-width: 500px){
+                    font-size: $fs-h5;                    
+                    padding-top: 1rem;
+                }
+            }
+
+            p{
+                margin: 1rem 0 2rem;
+                line-height: 2rem;
+
+                @media(max-width: 500px){                    
+                    padding: 0;                    
+                }
+            }
+            .btn{
+                @media(max-width: 500px){
+                    display: none;
+                }
+            }
+        }
+
+        .content-servicios-right{ 
+            flex: 1 1 40rem;   
+            display: grid;
+            gap: 1.2rem;
+            grid-template-columns: repeat(3, 1fr);    
+            justify-content: center; 
+            margin-top: 2rem;            
+
+            @media(max-width: 978px){
+                
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media(max-width: 500px){
+                
+                grid-template-columns: 1fr;
+            }
+
+            .category{
+                background-color: $bg;
+                padding: 1rem;                
+                margin: 0 .5rem;
+                border: 1px solid $white-letter;
+                border-radius: 25px; 
+                text-align: center;               
+
+                &:hover{
+                    transform:scale(1.08);
+                    cursor: pointer;
+                }
+
+                h4{
+                    margin-bottom: 12px;
+                    color: $white;
+                }
+                
+                i{
+                    color: $orange;
+                    margin-bottom:15px;
+                    font-size: 2rem;                   
+                }
+            }
+        }
+    }
+}
+
+// ESTILOS DE PROFESORES
+
+.trainers{
+    margin-top: 10vh;
+    min-height: 70vh;
+    margin-bottom: 5rem;
+    padding: 0;
+
+    .border {    
+        text-align: center;
+        margin-bottom: 2rem;   
+        position: relative;
+        margin: 5rem 0;     
+    }
+
+    &::before{    
+        content: "";
+        position:absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;    
+        background-color: $white;
+        z-index: -1;
+    }
+
+    h3{
+        display: inline;    
+        padding: 0.5rem 1rem;
+        background-color: $black;    
+        border-radius: 10px;
+        border: 2px solid $border;
+        text-align: center;
+        
+    }
+
+    .trainers-container-cards{
+        display: flex;    
+        justify-content: center;
+        align-items: center;   
+
+        @media(max-width:1400px){                       
+            flex-wrap: wrap;            
+        }
+        
+        
+        .card{
+            position: relative;
+            overflow: hidden;
+            min-width: 300px ;
+            margin: 1rem 0.5rem ; 
+            border: 1px solid var(--border); 
+            border-radius: 0.4rem; 
+            box-shadow: -1px 1px 78px -15px rgba(0,0,0,0.15); 
+
+            &:hover .social-media{
+                transform: translateX(0);
+
+            }
+            
+            .card-img{    
+                height: 20rem;
+                width: 300px; 
+                
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }               
+            }
+
+            .card-profile{
+                padding: 1rem ;
+                background-color: $black;
+                color: $white;   
+                
+                h4{
+                    font-size: 1.2rem;
+                    text-align: center;    
+                    margin-top: 2rem;                        
+                }
+
+                span{
+                    display:block;
+                    font-size: 1.2rem;
+                    margin: 1rem 0;
+                    padding: 1rem 0;  
+                    color: $orange;
+                    font-weight: 600; 
+                    border-bottom: 2px solid $white;       
+                }
+
+            }
+
+            .social-media{    
+                position: absolute;    
+                transform: translateX(50px);
+                top: 0;
+                right:0;
+                display: flex;
+                flex-direction: column;
+                background-color: $black;
+                padding: 0.8rem;
+
+                a{
+                    font-size: 1.5rem;
+                    color: var(--light-white);
+                    padding: 0.5rem 0;
+
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            }
+                 
+        }
+    }
+
+
+}
+
+// ESTILOS DE PROMOCIONES
+
+.banner{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4) ) ,url(../img/banner.jpg);
+    height: 25rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 2rem;  
+    
+    .banner-content{
+        
+
+        h3{
+            color: $white;
+            font-size:3rem;
+            padding: 1.5rem 0;
+        }
+
+        p{
+    
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            color: $white
+        }
+
+        
+        
+          
+    }
+}
+
+.offers{    
+    min-height:80vh;              
+    background-image: radial-gradient($black-light,$bg);
+    display:flex;
+    align-items: center; 
+    justify-content:center; 
+    
+   
+    
+    .flex-container{
+        display: flex;
+        justify-content:center;
+        flex-wrap: nowrap;
+        gap: 1rem;
+
+        @media(max-width:1000px){
+            flex-wrap: wrap;
+        }    
+
+        .price{
+            background:linear-gradient(130deg, $black 92%, transparent 90%);
+            max-height: 520px;
+            width: 340px;
+            display: flex; 
+            flex-direction: column;
+            margin-bottom: 15px;
+            border-radius: 0.4rem;           
+            
+            &:hover{
+                cursor: pointer;
+                
+                
+                
+                &:hover h3{
+                    color: $white;
+                }               
+            }
+
+            .price-content{   
+                padding: 0 1rem;    
+                text-align: center;
+
+                
+
+                h3{
+                    font-size:2rem;    
+                    padding: 1rem 0;
+                    text-align: center;                        
+                }
+
+                span{
+                    color: $white;
+                }
+
+                .nro{    
+                    font-size: 3.5rem;
+                    font-weight: 600; 
+                    color: $orange;   
+                }
+
+                p{
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+
+                button{  
+                    display:block;  
+                    margin:0 auto;
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                }                
+            }
+
+            ul{
+                padding: 1.5rem 1rem ;
+
+                li{
+                    padding: 0.5rem 0; 
+                    
+                    i{
+                        margin-right: 15px;
+                        color: $orange;
+                    }
+                        
+                }
+            }
+        }
+
+    }
+    
+}
+
+//ESTILOS DE TESTIMONIOS
+
+.testimonials{
+    background-color: $black-light;
+
+    .container-testimonials{
+        display: flex; 
+        justify-content:center;
+        padding:  1rem 0 ;    
+        background-color: $black-light;
+        box-shadow: -1px 1px 78px -15px rgba(0,0,0,0.15);
+
+        @media(max-width:1200px){
+            flex-wrap: wrap;
+        }
+
+        .box-testimonial{
+            padding: 1rem;
+            margin: 0.5rem 1rem;
+            border-radius: 1rem 0 0;    
+            min-width: 350px; 
+            background-color: $bg; 
+            border-bottom: 2px solid $border; 
+
+            i{
+                font-size:3rem;    
+                color: $orange;
+
+                @media(max-width:1200px){
+                    font-size:2rem;
+                    padding: 0;
+                }
+                
+            }
+
+            .content-testimonials{    
+                padding: 0.5rem;
+
+                
+
+                p{
+                    letter-spacing: 1px;
+                    line-height: 1.8rem;
+                    margin-bottom: 1.2rem;
+                }
+
+                .profile{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+
+                    img{
+                        border-radius: 50%;
+                        border: 3px solid $orange;
+                    }
+
+                    h4{
+                        text-transform: uppercase;
+                        color: $white;
+                        margin-left: 1rem;
+                        
+                    }
+                }
+            }
+             
+        }
+    }
+    
+}
+
+// ESTILOS DE BLOG
+
+.blog{
+    margin-bottom: 2rem;
+
+    @media(max-width:600px){
+        padding: 0.5rem;
+    }
+
+    .swiper-wrapper{
+        padding: 2rem 0;
+
+        .slide{
+            background-color:$black-light;
+            margin-bottom: 2rem;
+    
+            .post-img{
+                height: 20rem;    
+                width: 100%;
+                overflow: hidden;
+    
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+    
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+    
+            .post-content{
+                padding: 1rem;
+    
+                i{
+                    color: $orange;
+                    
+                }
+    
+                .post-content span{
+                    color: $orange;
+                    margin-left: 0.5rem;
+                    padding-bottom: 1rem;
+                    
+                }
+    
+                h3{
+                    font-size:1.5rem;
+                    padding: 1rem 0;
+                    color: $white;
+                }
+    
+                p{
+                    letter-spacing: 1px;
+                    margin-bottom: 1rem;
+                }
+    
+                .links{
+                    display: flex;
+    
+                    .user{
+                        margin-right: auto;    
+                    }
+    
+                    .icon{
+                        margin-right: 1rem;
+                    }
+                    
+                }
+            } 
+            
+    
+    
+        }
+
+    }
+    .swiper-pagination-bullet{
+        height: 1rem;
+        width: 1rem;    
+        background-color: $orange;
+        border-radius: 0;
+    }
+}
+
+//INICIAN ESTILOS DE FAQ
+
+.FAQ{
+    min-height: 20vh;     
+    display: flex ;
+    background-image: radial-gradient($bg,$black);
+    justify-content: center;
+    
+          
+    
+    .container{
+                   
+        
+        padding: 0rem 8%;
+        display: flex;
+        flex-direction: column;
+        
+                
+        
+        .heading{
+            text-align: center;
+            color: $white;
+            max-width: 600px;
+
+            h2{                
+                padding-bottom: 2rem;  
+                font-size: 2.6rem; 
+                
+                @media(max-width:668px){
+                    font-size: 2rem;
+                    padding-top: 2rem;
+                }  
+                
+            }
+
+            p{
+                font-size: 1.6rem;
+                margin-bottom: 3rem;
+
+                @media(max-width:668px){
+                    font-size: .9rem;
+                    
+                }  
+            }
+        }
+
+        @media(max-width:868px){
+            padding: 0 4%;
+        }
+        
+        @media(max-width:668px){
+            padding: 0 2%;
+        }  
+
+               
+        
+        .row{
+            display: flex;
+            flex-direction: column;
+            color: $white;
+            width: 800px;
+            
+            padding: 1.5rem 0;
+            border-bottom: 1px solid $white ;  
+                       
+            
+
+            .question{
+                font-size: 1.2rem;
+                width: 800px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;                                  
+            }
+
+            p{
+                
+                padding-top: 1rem;
+                line-height: 1.6rem;   
+                display: none;                  
+            }       
+
+            
+
+        }
+        .is-active p{
+            display: block;
+        }
+
+        
+        
+    }
+
+    .is-active{
+        max-height: fit-content;
+        
+    }
+
+
+}
+
+
+
+
+
+
+//ESTILOS DE PRODUCTOS
+
+.shop{
+    padding: 8rem 8%;
+
+    .container-grid{
+        display: grid;
+        justify-content:center;
+        gap: 2rem;
+        grid-template-columns:repeat(auto-fit,minmax(20rem, .5fr));
+
+        .card{
+            background-color:$black;
+            border:$border 1px solid;            
+            text-align: center;
+            height: 28rem;
+            max-width: 20rem; 
+
+            .product{
+                position: relative; 
+                overflow: hidden; 
+
+                &:hover .cart{
+                    color: $orange;
+                    cursor: pointer;
+                }
+                
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    transition: .3s;
+
+                    &:hover{
+                        transform: scale(1.1); 
+                        cursor: pointer;   
+                    }
+                }
+
+                .cart{
+                    position:absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 1.6rem;
+                    padding: 1rem;
+                    border: 1px solid $border;
+                    color: $white;
+                    
+                    
+                }
+                   
+            }
+
+            .product-info{   
+    
+                text-align: center; 
+                margin: auto 0;
+
+                h4{
+                    color: $white;
+                    font-size: 1rem;
+                    margin-bottom:1rem;
+
+                   
+                }
+
+                .stars{
+                    color: $orange;
+                    margin-bottom: 1rem;
+                }
+
+                .price{
+                    color: $white;
+                    font-size:1.4rem;
+                    
+                    span{
+                        color: $border;
+                        position:relative;
+                        font-size: .8rem;
+                        margin-left: 5px;
+                        
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            width: 100%;
+                            height: 1px;
+                            background-color:$border;
+                        }
+                    }
+                }
+
+            
+            }
+
+            
+
+        }
+    }
+}
+
+// ESTILOS DE CLASES
+
+.clases{
+    padding: 0 8%;
+
+    .container-clases{
+        margin-top: 4rem;
+
+        .box{
+            height: 50vh;
+            position:relative;
+
+            &:hover .content{
+                transform:translateX(0);
+                opacity:1
+            }
+
+            &:nth-child(1){
+                width:100%;    
+                background: linear-gradient(to right, rgba(0,0,0,0.4) , rgba(0,0,0,0.1)), url(../img/clases-2.jpg) no-repeat center; 
+                background-size: cover;    
+                
+            }
+            &:nth-child(2){
+                width:100%;    
+                background:linear-gradient(to right, rgba(0,0,0,0.4) , rgba(0,0,0,0.1)), url(../img/clases-3.jpg) no-repeat center; 
+                background-size: cover;    
+                
+            }
+            &:nth-child(3){
+                width:100%;    
+                background: linear-gradient(to right, rgba(0,0,0,0.4) , rgba(0,0,0,0.1)), url(../img/clases-5.jpg) no-repeat center; 
+                background-size: cover;    
+                
+            }
+            &:nth-child(4){
+                width:100%;    
+                background:linear-gradient(to right, rgba(0,0,0,0.4) , rgba(0,0,0,0.1)), url(../img/clases-6.jpg) no-repeat center; 
+                background-size: cover;    
+                
+            }
+            &:nth-child(5){
+                width:100%;    
+                background:linear-gradient(to right, rgba(0,0,0,0.4) , rgba(0,0,0,0.1)), url(../img/clases-7.jpg) no-repeat center; 
+                background-size: cover;    
+                
+            }
+            &:nth-child(6){
+                width:100%;    
+                background:linear-gradient(to right, rgba(0,0,0,0.4) , rgba(0,0,0,0.1)), url(../img/clases-1.jpg) no-repeat center; 
+                background-size: cover;    
+                
+            }
+            &:nth-child(7){
+                width:100%;    
+                background:linear-gradient(to right, rgba(0,0,0,0.4) , rgba(0,0,0,0.1)), url(../img/clases-4.jpg) no-repeat center; 
+                background-size: cover;     
+            }
+
+            .content{
+                position: absolute;
+                top: 30%;
+                left: 20%;
+                transform: translateX(100px);
+                opacity: 0;
+
+                @media(max-width:500px){
+                    top: 30%;
+                    left:8%;
+                    text-align: center;
+                }
+
+                h3{
+                    margin-bottom: 1.5rem;
+                }                
+            }            
+        }        
+    }
+}
+
+//ESTILOS DE CONTACTO
+
+.container{
+    display: flex;    
+    align-items: center;
+    min-height: 90vh;
+    padding: 5rem 8%;
+
+    @media(max-width:600px){
+        padding: 5rem 2%;
+    }
+    
+    
+    .row{
+        display: flex;        
+        justify-content:center;
+
+        @media(max-width:1200px){
+            flex-wrap: wrap;
+        }
+        
+
+        .map{
+            flex: 1 1 40rem;
+            width: 100%;
+            height: 530px;
+            object-fit: cover;
+            
+        }
+    
+        .container-form{
+            flex: 1 1 40rem;
+            background-color: $black;    
+            padding: 20px 15px;    
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+            border: 2px solid $white-letter;
+            
+            .row{
+                display: flex;                
+                justify-content: center;
+                gap: 2rem;
+    
+                .col{
+                    flex: 1 1 250px ;
+    
+                    .titulo{
+                        font-size: 20px;
+                        color: $white;
+                        padding-bottom: 10px;
+                        text-transform: uppercase;
+                    }
+    
+                    .inputbox{
+                        margin: 15px 0px ; 
+    
+                        span{
+                            color: $white;
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+    
+                        img{
+                            width: 220px;
+                        }
+
+                        input{
+                            width: 100%;
+                            color: $white;
+                            background-color: $black;    
+                            border: 1px solid $white-letter;
+                            border: 1px solid $border;
+                            padding: 10px 15px;
+                            font-size: 15px;
+                            text-transform: none;
+                            
+                        }                       
+                    }
+
+                    .flex{
+                        display:flex;
+                        gap: 1rem;
+
+                        .inputbox-flex{
+                            width: 100%;                           
+                            font-size: 15px;
+                            text-transform: none;  
+                            
+                            span{
+                                color: $white;
+                            }
+
+                            input{
+                                width: 100%;
+                                color: $white;
+                                background-color: $black;    
+                                border: 1px solid $white-letter;
+                                border: 1px solid $border;
+                                padding: 10px 15px;
+                                font-size: 15px;
+                                text-transform: none;
+                            }
+                            
+                        }
+                    }
+                }               
+            }
+
+            .button{
+                margin-top: 15px;
+                background-color: $orange;
+                font-size: 15px;
+                font-weight: 600;
+                width: 100%;
+                padding: 15px 10px;
+                color: $white;
+                border: none;
+                border-radius: 5px;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+
+    
+
+
+
+
+
+
+// ESTILOS DE FOOTER
+
+footer{
+    background-color: $black;
+    padding: 0 8%;
+
+    @media (max-width: 600px ){            
+        padding: 0 2%;   
+    }
+
+    .flex-container{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+
+        @media (max-width: 1200px ){            
+                display: flex;
+                flex-direction: column;
+                text-align: center;           
+        }        
+
+        div{
+            padding: 1rem 0;
+
+            @media (max-width: 600px ){            
+                font-size: 1rem; 
+                padding: 0.5rem 0;  
+            }
+
+            h4{
+                font-size: 1rem;
+                margin-bottom: 12px;
+                color: $white;
+            }
+
+            p{
+                line-height:  1.5rem;
+
+                &:hover{
+                    color: $white;
+                }
+            }
+
+            i{
+                padding: 1rem 0;
+                font-size: 2.2rem;
+                margin-right: 1rem; 
+
+                @media (max-width: 600px ){            
+                    font-size: 1rem;                     
+                }               
+
+                &:hover{
+                    color: $white;
+                }
+            }
+
+            input{
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+
+            .info{
+                @media (max-width: 600px ){            
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    .copyright{
+        text-align: center;
+    }
+}
+
+    

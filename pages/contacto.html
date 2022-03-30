@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <!-------------- CDN FONT AWESOME -------------->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-------------- GOOGLE FONTS LINK -------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-------------- ARCHIVO CSS -------------->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Physical Point</title>
+</head>
+<body ontouchstart>
+    <header class="header">
+        <a class="logo" href="">PHYSICAL POINT</a>
+        <nav class="nav" >
+            <ul class="nav-bar" id="nav">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li class="link-clases"><a href="clases.html">Clases</a>
+                    <ul class="desplegable">
+                        <li><a href="">CrossFit</a></li>
+                        <li><a href="">Kangoo Jump</a></li>
+                        <li><a href="">Boxeo</a></li>
+                        <li><a href="">Yoga</a></li>
+                        <li><a href="">Spining</a></li>
+                        <li><a href="">Body Pump</a></li>
+                        <li><a href="">Zumba</a></li>
+                    </ul>
+                </li>                                               
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+                        
+        </nav> 
+              
+        <div class="menu" id="open-close">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav class="lat-nav" id="lat-nav">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="clases.html">Clases</a></li>                                     
+            <li><a href="contacto.html">Contacto</a></li>
+        </nav>
+               
+    </header>
+    
+    <section class="container">
+
+        <div class="row">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26239.22833249686!2d-58.32341438822289!3d-34.70761278459744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332615471bb17%3A0x416cf3acb3a9b900!2sWilde%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1645994878322!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <form class="container-form">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="titulo">Datos de pago</h3>
+                        <div class="inputbox">
+                            <span>Nombre completo :</span>
+                            <input type="text" placeholder="Ingresa tu nombre">
+                        </div>
+                        <div class="inputbox">
+                            <span>Email :</span>
+                            <input type="email" placeholder="Ejemplo@ejemplo.com">
+                        </div>     
+                        <div class="inputbox">
+                            <span>Direccion :</span>
+                            <input type="text" placeholder="Direccion">
+                        </div>     
+                        <div class="inputbox">
+                            <span>Localidad :</span>
+                            <input type="text" placeholder="Localidad">
+                        </div>
+                        <div class="flex">
+                            <div class="inputbox-flex">
+                              <span>Pais :</span>
+                              <input type="text" placeholder="Ingresa pais">                          
+                            </div>
+                            <div class="inputbox-flex">
+                                <span>Codigo Zip :</span>
+                                <input type="number" placeholder="123 456">                          
+                            </div>
+                        </div>             
+                        
+                    </div>
+                    <div class="col">
+                        <h3 class="titulo">Tarjetas</h3>
+                        <div class="inputbox">
+                            <span>Tarjetas aceptadadas :</span>
+                            <img src="../img/card_img.png" >
+                        </div>
+                        <div class="inputbox">
+                            <span>Nombre del titular :</span>
+                            <input type="text" >
+                        </div>     
+                        <div class="inputbox">
+                            <span>Numero de tarjeta :</span>
+                            <input type="number" >
+                        </div>     
+                        <div class="inputbox">
+                            <span>Fecha de exp :</span>
+                            <input type="text" >
+                        </div>
+                        <div class="flex">
+                            <div class="inputbox-flex">
+                              <span>Año de exp :</span>
+                              <input type="number" >                          
+                            </div>
+                            <div class="inputbox-flex">
+                                <span>CVV :</span>
+                                <input type="number" >                          
+                            </div>
+                        </div>                    
+                    </div>  
+                </div>
+                <input type="submit" value="CONFIRMAR COMPRA" class="button">
+                
+            </form>
+        </div>
+
+                  
+      
+    </section>
+    <footer class="footer">
+        <div class="flex-container">            
+            <div class="info">
+                <h4>Veni a conocernos</h4>
+                <p>Physical Point</p>
+                <p>Argentina</p>
+                <p>Avellaneda-Wilde</p>
+                <p>Mitre 6480</p>
+                <p>11 4227-5923</p> 
+            </div>
+            <div class="content-left">
+                <h4>Contenido</h4>
+                <p>Seguinos en nuestras redes sociales para estar siempre motivado</p>
+                <ul>
+                    <i class="fa-brands fa-facebook"><a href=""></a></i>
+                    <i class="fa-brands fa-twitter"><a href=""></a></i>  
+                    <i class="fa-brands fa-instagram"><a href=""></a></i>
+                </ul>                
+            </div>
+            <div>
+                <div class="content-right">
+                    <h4>¿Te quedaron dudas?</h4>
+                    <input type="email" placeholder="Ingresa tu mensaje">
+                </div>
+                
+                <div class="info">
+                    <h4>Titutlo de informacion</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Commodi<br>  
+                     eius vero illo error hic numquam earum tempore aperiam?</p>
+                </div>
+            </div>                   
+            
+        </div>
+        <div class="copyright">
+            <p>Todos los derechos reservados  2022</p>
+        </div>      
+        
+    </footer>
+
+    <script src="../index.js"></script>
+    
+</body>
+</html>
