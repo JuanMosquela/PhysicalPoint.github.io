@@ -82,7 +82,7 @@ p {
       font-size: 1.8rem; } }
 
 .header {
-  min-height: 70px;
+  height: 70px;
   position: fixed;
   top: 0;
   left: 0;
@@ -92,8 +92,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 0 8%;
-  z-index: 100;
-  background-color: #000; }
+  z-index: 100; }
   @media (max-width: 600px) {
     .header {
       padding: 0 2%; } }
@@ -182,6 +181,9 @@ p {
       color: #4EC95C;
       background-color: #FFF; }
 
+.active {
+  background-color: #000; }
+
 .hero {
   padding: 0;
   margin-bottom: 2rem; }
@@ -222,7 +224,7 @@ p {
       left: 8%; }
       @media (max-width: 678px) {
         .hero .hero-slider .swiper-slide .hero-content {
-          text-align: center;
+          left: 0;
           padding: 1rem; } }
       .hero .hero-slider .swiper-slide .hero-content span {
         color: #faba43;
@@ -320,7 +322,7 @@ p {
           line-height: 1.8rem; }
 
 .servicios {
-  background-image: radial-gradient(#1F2023, #000);
+  background-color: #000;
   min-height: 30rem;
   margin-bottom: 2rem; }
   .servicios .servicios-container {
@@ -477,11 +479,9 @@ p {
     color: #FFF;
     font-size: 3rem;
     padding: 1.5rem 0; }
-  .banner .banner-content p {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    max-width: 800px;
-    color: #FFF; }
+    @media (max-width: 600px) {
+      .banner .banner-content h3 {
+        font-size: 2rem; } }
 
 .offers {
   min-height: 80vh;
@@ -629,58 +629,44 @@ p {
     border-radius: 0; }
 
 .FAQ {
-  min-height: 20vh;
-  display: flex;
-  background-image: radial-gradient(#1F2023, #000);
-  justify-content: center; }
+  background-color: #1F2023; }
+  @media (max-width: 600px) {
+    .FAQ {
+      padding: 0 2%; } }
+  .FAQ p {
+    text-align: center;
+    font-size: 1.1rem; }
   .FAQ .container {
-    padding: 0rem 8%;
-    display: flex;
     flex-direction: column; }
-    .FAQ .container .heading {
-      text-align: center;
-      color: #FFF;
-      max-width: 600px; }
-      .FAQ .container .heading h2 {
-        padding-bottom: 2rem;
-        font-size: 2.6rem; }
-        @media (max-width: 668px) {
-          .FAQ .container .heading h2 {
-            font-size: 2rem;
-            padding-top: 2rem; } }
-      .FAQ .container .heading p {
-        font-size: 1.6rem;
-        margin-bottom: 3rem; }
-        @media (max-width: 668px) {
-          .FAQ .container .heading p {
-            font-size: .9rem; } }
-    @media (max-width: 868px) {
-      .FAQ .container {
-        padding: 0 4%; } }
-    @media (max-width: 668px) {
-      .FAQ .container {
-        padding: 0 2%; } }
-    .FAQ .container .row {
-      display: flex;
-      flex-direction: column;
-      color: #FFF;
-      width: 800px;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid #FFF; }
-      .FAQ .container .row .question {
-        font-size: 1.2rem;
-        width: 800px;
+    .FAQ .container .container-question {
+      background-color: #27282D;
+      margin: 1rem 0;
+      padding: 1.5rem 1rem;
+      cursor: pointer;
+      transition: 0.3s; }
+      .FAQ .container .container-question:hover {
+        color: #FFF; }
+      @media (max-width: 600px) {
+        .FAQ .container .container-question {
+          padding: 1rem 0.5rem; } }
+      .FAQ .container .container-question .question {
+        background-color: #27282D;
         display: flex;
-        justify-content: space-between;
-        align-items: center; }
-      .FAQ .container .row p {
+        justify-content: space-between; }
+      .FAQ .container .container-question .answer {
+        text-align: justify;
         padding-top: 1rem;
-        line-height: 1.6rem;
-        display: none; }
-    .FAQ .container .is-active p {
-      display: block; }
-  .FAQ .is-active {
-    max-height: fit-content; }
+        max-height: 0;
+        opacity: 0;
+        transition: 0.3 ease all; }
+    .FAQ .container .is-active {
+      border: 1px solid #c8ccd1; }
+      .FAQ .container .is-active .answer {
+        opacity: 1;
+        max-height: fit-content; }
+      .FAQ .container .is-active .question i {
+        transform: rotate(180deg);
+        transition: .1s; }
 
 .shop {
   padding: 8rem 8%; }

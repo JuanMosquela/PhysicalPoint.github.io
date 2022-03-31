@@ -9,5 +9,13 @@ $orange:#faba43;
 $whatsapp:#4EC95C;
 
 $fs-h1: 3rem;
+$fs-2: 2.6rem;
 $fs-h3: 2.4rem;
 $fs-h5: 1.8rem;
+
+
+@mixin d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

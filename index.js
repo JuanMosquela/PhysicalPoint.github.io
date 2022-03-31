@@ -1,36 +1,24 @@
 const $openClose=document.getElementById('open-close');
 const $nav=document.getElementById('lat-nav');
 const $themeToggler= document.querySelector('.theme');
-const $rows = document.querySelectorAll('.container .row');
+const $question = document.querySelectorAll('.container .container-question');
 const $arrow = document.getElementById('arrow');
 
-$rows.forEach(el => {
-    el.addEventListener('click', ()=>{
-        el.classList.toggle('is-active')
-    })
 
-    
-});
+//HEADER
+
+window.addEventListener('scroll', () =>{
+    const header = document.querySelector('.header');
+    header.classList.toggle('active', window.scrollY > 0)
+
+})
+
 
 //BAR-NAV
-
 
 $openClose.addEventListener('click',()=>{
     $nav.classList.toggle('active');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // SECCION SLIDER-HERO
 
@@ -55,7 +43,6 @@ var swiper = new Swiper(".hero-slider", {
 });
 
 //SECCION SLIDER-BLOG
-
 
 var swiper = new Swiper(".blog-slider", {
     spaceBetween: 20,
@@ -82,5 +69,13 @@ var swiper = new Swiper(".blog-slider", {
     }
 });
 
+//FAQ
+
+$question.forEach(el => {
+    el.addEventListener('click', ()=>{
+        el.classList.toggle('is-active');        
+    })
+    
+});
 
 

@@ -4,7 +4,7 @@
 // ESTILOS DE HEADER
 
 .header{
-    min-height: 70px;        
+    height: 70px;        
     position: fixed;
     top: 0; left: 0; right: 0;
     display:flex;
@@ -13,7 +13,7 @@
     align-items: center;
     padding: 0 8%;  
     z-index: 100;    
-    background-color: $black; 
+     
     
     @media(max-width: 600px){
         padding: 0 2%;
@@ -145,6 +145,10 @@
       
 }
 
+.active{
+    background-color: $black;
+}
+
 
 
 //ESTILOS DE HERO
@@ -206,7 +210,7 @@
                 left: 8%; 
                 
                 @media(max-width: 678px){
-                    text-align: center;
+                    left: 0;                    
                     padding:  1rem;                    
                 }
                 
@@ -355,7 +359,7 @@
 //ESTILOS DE SERVICIOS
 
 .servicios{
-    background-image: radial-gradient($bg,$black);  
+    background-color: $black ; 
     min-height: 30rem;  
     margin-bottom: 2rem;   
 
@@ -586,15 +590,16 @@
             color: $white;
             font-size:3rem;
             padding: 1.5rem 0;
+
+            @media (max-width: 600px) {
+                font-size: 2rem;
+                
+            }
         }
 
-        p{
-    
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
-            color: $white
-        }
+
+
+        
 
         
         
@@ -698,6 +703,7 @@
 
 .testimonials{
     background-color: $black-light;
+    
 
     .container-testimonials{
         display: flex; 
@@ -852,100 +858,76 @@
 //INICIAN ESTILOS DE FAQ
 
 .FAQ{
-    min-height: 20vh;     
-    display: flex ;
-    background-image: radial-gradient($bg,$black);
-    justify-content: center;
     
-          
+      
+    background-color: $bg;
+
+    @media(max-width:600px){
+        padding: 0 2%;
+    }  
+    
+    p{
+        text-align: center;
+        font-size: 1.1rem;
+    }
     
     .container{
-                   
-        
-        padding: 0rem 8%;
-        display: flex;
         flex-direction: column;
         
-                
         
-        .heading{
-            text-align: center;
-            color: $white;
-            max-width: 600px;
 
-            h2{                
-                padding-bottom: 2rem;  
-                font-size: 2.6rem; 
-                
-                @media(max-width:668px){
-                    font-size: 2rem;
-                    padding-top: 2rem;
-                }  
-                
+        .container-question{
+            background-color: $black-light;
+            margin: 1rem 0;
+            padding:  1.5rem 1rem;
+            cursor: pointer; 
+            transition: 0.3s;
+
+            &:hover{
+                color: $white;
             }
-
-            p{
-                font-size: 1.6rem;
-                margin-bottom: 3rem;
-
-                @media(max-width:668px){
-                    font-size: .9rem;
-                    
-                }  
+            
+            @media(max-width:600px){
+                padding: 1rem 0.5rem;
             }
-        }
-
-        @media(max-width:868px){
-            padding: 0 4%;
-        }
-        
-        @media(max-width:668px){
-            padding: 0 2%;
-        }  
-
-               
-        
-        .row{
-            display: flex;
-            flex-direction: column;
-            color: $white;
-            width: 800px;
-            
-            padding: 1.5rem 0;
-            border-bottom: 1px solid $white ;  
-                       
-            
 
             .question{
-                font-size: 1.2rem;
-                width: 800px;
+                background-color: $black-light;                
                 display: flex;
-                justify-content: space-between;
-                align-items: center;                                  
+                justify-content: space-between; 
+                
+                
             }
 
-            p{
-                
+            .answer{
+                text-align: justify;
                 padding-top: 1rem;
-                line-height: 1.6rem;   
-                display: none;                  
-            }       
-
-            
-
-        }
-        .is-active p{
-            display: block;
+                max-height: 0;
+                opacity: 0;
+                transition: 0.3 ease all;
+            }
         }
 
-        
-        
-    }
+        .is-active{            
+            border: 1px solid $border;
 
-    .is-active{
-        max-height: fit-content;
-        
+            .answer{
+                opacity: 1;
+                max-height: fit-content;                
+            }
+
+            .question i{
+                transform: rotate(180deg);
+                transition: .1s;             
+
+            }
+        }
     }
+          
+    
+    
+
+    
 
 
 }
