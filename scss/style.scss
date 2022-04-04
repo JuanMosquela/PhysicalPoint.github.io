@@ -838,6 +838,22 @@
     min-height: 50rem;    
     background-color: $bg;
     margin-top: 5rem;
+
+    .title{
+        text-align: center;
+        margin-top: 5rem;
+        
+
+        h2{
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+            color: $white;
+            
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
     
     
     @media(max-width:600px){
@@ -1008,69 +1024,43 @@
             width: 100%;
             overflow: hidden;
             position: relative;
+            @include d-flex;
+            
             transition: 1s;      
 
             img{
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-                position: relative;               
+                              
             }
 
-            .element{
-                position: absolute;
-                width: 620px;
-                height: 620px;
-                top: -10%;
-                right: -100%;
-                transform: skew(-30deg);
-                border: 5px solid $white;                             
-                @include d-flex; 
-                flex-direction: column;               
-                z-index: 10;                
+            .content{
+                position: absolute; 
+                z-index: 10; 
+                opacity: 0;                            
+                
 
-               .content{
-                   position: absolute;
-                   top: 35%;
-                   left: 0;
-                   transform: skew(30deg);
-                   margin-left: 2rem;
+                h3{   
+                 font-size: 3rem;                    
+                 font-weight: 600;
+                 padding: 2rem ;
+                 color: $white;
+                }  
 
-                   h3{   
-                    font-size: 2.6rem;                    
-                    font-weight: 600;
-                    padding: 2rem ;
-                    color: $white;
-                   }  
+                
+                
+                
+             }                                     
+
                    
-                   a{
-                       margin-left: 2rem;
-                   }
-                }             
-            }
-
-            &:hover .element{
-                right: -15%;
-                bottom: -15%;
-            }
-
-            &::before{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0,0,0,0.2);
-                opacity: 0;               
-                z-index: 1;
-                transition: .3s;
-            }
             
-            &:hover::before{
-                opacity: 1;               
-            }
-        }            
+
+            
+
+            
+        }
+        
     }
 }
 

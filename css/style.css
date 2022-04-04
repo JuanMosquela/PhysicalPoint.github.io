@@ -635,6 +635,15 @@ p {
   min-height: 50rem;
   background-color: #1F2023;
   margin-top: 5rem; }
+  .FAQ .title {
+    text-align: center;
+    margin-top: 5rem; }
+    .FAQ .title h2 {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+      color: #FFF; }
+    .FAQ .title p {
+      font-size: 1.2rem; }
   @media (max-width: 600px) {
     .FAQ {
       padding: 0 2%; } }
@@ -744,54 +753,23 @@ p {
       width: 100%;
       overflow: hidden;
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       transition: 1s; }
       .clases .container-clases .box-clase img {
         height: 100%;
         width: 100%;
-        object-fit: cover;
-        position: relative; }
-      .clases .container-clases .box-clase .element {
+        object-fit: cover; }
+      .clases .container-clases .box-clase .content {
         position: absolute;
-        width: 620px;
-        height: 620px;
-        top: -10%;
-        right: -100%;
-        transform: skew(-30deg);
-        border: 5px solid #FFF;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        z-index: 10; }
-        .clases .container-clases .box-clase .element .content {
-          position: absolute;
-          top: 35%;
-          left: 0;
-          transform: skew(30deg);
-          margin-left: 2rem; }
-          .clases .container-clases .box-clase .element .content h3 {
-            font-size: 2.6rem;
-            font-weight: 600;
-            padding: 2rem;
-            color: #FFF; }
-          .clases .container-clases .box-clase .element .content a {
-            margin-left: 2rem; }
-      .clases .container-clases .box-clase:hover .element {
-        right: -15%;
-        bottom: -15%; }
-      .clases .container-clases .box-clase::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.2);
-        opacity: 0;
-        z-index: 1;
-        transition: .3s; }
-      .clases .container-clases .box-clase:hover::before {
-        opacity: 1; }
+        z-index: 10;
+        opacity: 0; }
+        .clases .container-clases .box-clase .content h3 {
+          font-size: 3rem;
+          font-weight: 600;
+          padding: 2rem;
+          color: #FFF; }
 
 .container {
   display: flex;
