@@ -107,7 +107,7 @@ p {
         padding: 0.5rem; } }
   .header .menu {
     display: none; }
-    @media (max-width: 978px) {
+    @media (max-width: 840px) {
       .header .menu {
         display: block;
         position: absolute;
@@ -120,29 +120,37 @@ p {
   .header .lat-nav {
     display: block;
     position: absolute;
-    width: 300px;
+    width: 60%;
+    height: 480px;
     background-color: #000;
     top: 60px;
     right: 0;
     padding: 0.5rem 1rem;
-    transform: translateX(300px);
+    transform: translateX(100%);
+    border-radius: 0 0 0 10px;
     box-shadow: -1px 1px 78px -15px rgba(0, 0, 0, 0.15); }
+    @media (min-width: 840px) {
+      .header .lat-nav {
+        display: none; } }
+    @media (max-width: 678px) {
+      .header .lat-nav {
+        width: 80%; } }
     .header .lat-nav.active {
       transform: translateX(0); }
     .header .lat-nav li a {
       font-weight: 600;
       color: rgba(255, 255, 255, 0.6);
       border: #c8ccd1 1px solid;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       display: block;
-      margin: 15px 0;
+      margin: 2rem 0;
       padding: 0.5rem; }
       .header .lat-nav li a:hover {
         color: #FFF;
         border: 2px solid #FFF; }
   .header .nav-bar {
     display: flex; }
-    @media (max-width: 978px) {
+    @media (max-width: 840px) {
       .header .nav-bar {
         display: none; } }
     .header .nav-bar li {
@@ -624,15 +632,17 @@ p {
             margin-right: 1rem; }
 
 .FAQ {
-  background-color: #1F2023; }
+  min-height: 50rem;
+  background-color: #1F2023;
+  margin-top: 5rem; }
   @media (max-width: 600px) {
     .FAQ {
       padding: 0 2%; } }
-  .FAQ p {
-    text-align: center;
-    font-size: 1.1rem; }
   .FAQ .container {
-    flex-direction: column; }
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .FAQ .container .container-question {
       background-color: #27282D;
       margin: 1rem 0;
@@ -664,7 +674,7 @@ p {
         transition: .1s; }
 
 .shop {
-  padding: 8rem 8%; }
+  padding: 3rem 8%; }
   .shop .container-grid {
     display: grid;
     justify-content: center;
@@ -673,7 +683,8 @@ p {
     .shop .container-grid .card {
       background-color: #000;
       border: #c8ccd1 1px solid;
-      text-align: center; }
+      text-align: center;
+      padding: 1rem; }
       .shop .container-grid .card .product {
         position: relative;
         overflow: hidden; }
@@ -694,7 +705,6 @@ p {
           right: 0;
           font-size: 1.6rem;
           padding: 1rem;
-          border: 1px solid #c8ccd1;
           color: #FFF; }
       .shop .container-grid .card .product-info {
         text-align: center;
@@ -724,6 +734,9 @@ p {
 
 .clases {
   padding: 0 8%; }
+  @media (max-width: 600px) {
+    .clases {
+      padding: 0; } }
   .clases .container-clases {
     margin-top: 4rem; }
     .clases .container-clases .box-clase {

@@ -1,26 +1,15 @@
-const $openClose=document.getElementById('open-close');
-const $nav=document.getElementById('lat-nav');
-const $themeToggler= document.querySelector('.theme');
-const $question = document.querySelectorAll('.container .container-question');
-const $arrow = document.getElementById('arrow');
+import latNav from './js/burger.js';
+import header from './js/header.js';
+import faq from './js/faq.js';
 
-
-//HEADER
-
-window.addEventListener('scroll', () =>{
-    const header = document.querySelector('.header');
-    header.classList.toggle('active', window.scrollY > 0)
-
+document.addEventListener('DOMContentLoaded', (e) => {
+    latNav('.menu', '.lat-nav' );
+    header('.header');
+    faq('.container .container-question')
 })
 
 
-//BAR-NAV
-
-$openClose.addEventListener('click',()=>{
-    $nav.classList.toggle('active');
-});
-
-// SECCION SLIDER-HERO
+// // SECCION SLIDER-HERO
 
 
 var swiper = new Swiper(".hero-slider", {
@@ -66,13 +55,7 @@ var swiper = new Swiper(".blog-slider", {
     }
 });
 
-//FAQ
 
-$question.forEach(el => {
-    el.addEventListener('click', ()=>{
-        el.classList.toggle('is-active');        
-    })
-    
-});
+
 
 
