@@ -379,7 +379,7 @@ p {
         padding: 1rem;
         margin: 0 .5rem;
         border: 1px solid rgba(255, 255, 255, 0.6);
-        border-radius: 25px;
+        border-radius: 15px;
         text-align: center; }
         .servicios .servicios-container .content-servicios-right .category:hover {
           transform: scale(1.08);
@@ -590,13 +590,15 @@ p {
         .testimonials .container-testimonials .box-testimonial .content-testimonials .profile {
           display: flex;
           align-items: center;
-          margin-bottom: 1rem; }
+          justify-content: center;
+          margin-bottom: 2rem; }
           .testimonials .container-testimonials .box-testimonial .content-testimonials .profile img {
             border-radius: 50%;
             border: 3px solid #faba42; }
           .testimonials .container-testimonials .box-testimonial .content-testimonials .profile h4 {
             text-transform: uppercase;
             color: #FFF;
+            font-size: 1.2rem;
             margin-left: 1rem; }
 
 .blog {
@@ -654,10 +656,17 @@ p {
       padding: 0;
       margin-top: 10rem; } }
   .FAQ .img {
+    flex: 1 1 40rem;
+    height: 580px;
     position: relative;
     padding: 1rem;
     margin-top: 10%;
+    margin: 0 .5rem;
     z-index: 1; }
+    .FAQ .img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
     .FAQ .img::before {
       content: "";
       position: absolute;
@@ -680,8 +689,10 @@ p {
       transition: 0.3s; }
   .FAQ .container-faq {
     display: flex;
+    flex: 1 1 40rem;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    max-width: 700px; }
     .FAQ .container-faq .container {
       display: flex;
       flex-direction: column; }
