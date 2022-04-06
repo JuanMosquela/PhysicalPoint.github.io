@@ -859,23 +859,29 @@
 //INICIAN ESTILOS DE FAQ
 
 .FAQ{    
+    min-height: 80vh;
     background-color: $bg;  
     display: flex; 
-    justify-content: center;    
-    align-items: center;
+    justify-content: center;  
+    align-items: center;    
     
     @media (max-width:1000px){
         flex-wrap: wrap;
         padding: 0;
-    }
+        margin-top: 10rem;
+    }   
     
     .img{ 
+        
         position: relative;
         padding: 1rem;
+        margin-top: 10%;
         z-index: 1;
         @media (max-width:1000px){
-           margin-bottom: 5rem;
+           
         } 
+
+        
 
         &::before{
             content: "";
@@ -912,9 +918,9 @@
 
     .container-faq{        
         display: flex;
-        justify-content: center; 
-        align-items: center;       
+        justify-content: center;              
         flex-direction: column; 
+        
         
         
         
@@ -1301,16 +1307,23 @@ footer{
     }
 
     .flex-container{
-
-        display: flex;
-        flex-wrap: wrap;
+        display: flex;        
         justify-content:space-between;
+    
 
-        @media (max-width: 1200px ){            
-                display: flex;
-                flex-direction: column;
-                text-align: center;           
-        }        
+        @media (max-width: 800px ){                 
+                flex-wrap: wrap;
+                
+                          
+        }  
+        @media (max-width: 600px ){
+            justify-content: center;
+            text-align: center;
+           
+                        
+            
+        }             
+               
 
         div{
             padding: 1rem 0;

@@ -643,6 +643,7 @@ p {
             margin-right: 1rem; }
 
 .FAQ {
+  min-height: 80vh;
   background-color: #1F2023;
   display: flex;
   justify-content: center;
@@ -650,14 +651,13 @@ p {
   @media (max-width: 1000px) {
     .FAQ {
       flex-wrap: wrap;
-      padding: 0; } }
+      padding: 0;
+      margin-top: 10rem; } }
   .FAQ .img {
     position: relative;
     padding: 1rem;
+    margin-top: 10%;
     z-index: 1; }
-    @media (max-width: 1000px) {
-      .FAQ .img {
-        margin-bottom: 5rem; } }
     .FAQ .img::before {
       content: "";
       position: absolute;
@@ -681,7 +681,6 @@ p {
   .FAQ .container-faq {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column; }
     .FAQ .container-faq .container {
       display: flex;
@@ -931,12 +930,13 @@ footer {
       padding: 0 2%; } }
   footer .flex-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between; }
-    @media (max-width: 1200px) {
+    @media (max-width: 800px) {
       footer .flex-container {
-        display: flex;
-        flex-direction: column;
+        flex-wrap: wrap; } }
+    @media (max-width: 600px) {
+      footer .flex-container {
+        justify-content: center;
         text-align: center; } }
     footer .flex-container div {
       padding: 1rem 0;
