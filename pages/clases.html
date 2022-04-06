@@ -19,6 +19,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+     <!-------------- CDN AOS -------------->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-------------- ARCHIVO CSS -------------->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
@@ -44,13 +47,14 @@
         <div class="menu" id="open-close">
             <i class="fa-solid fa-bars"></i>
         </div>
-        <nav class="lat-nav" id="lat-nav">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./productos.html">Productos</a></li>
-            <li><a href="./clases.html">Clases</a></li>                                           
-            <li><a href="./contacto.html">Contacto</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-
+        <nav class="lat-nav" >
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./clases.html">Clases</a></li>                                            
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+            </ul>
         </nav>
 
         <a class='whatsapp' href="https://wa.me/1140895192?text=Hola,%20necesito%20informacion" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
@@ -61,45 +65,52 @@
         <section class="clases">
             <div class="container-clases">
                
-                <div class="box-clase">
+                <div class="box-clase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <img src="../img/clases-2.jpg" alt="">
                     <div class="content">
-                        <h3>Kangoo Jump</h3>                       
+                        <h3>CrossFit</h3>                       
                         <a href="#" class="btn">Inscribirse</a>
                     </div>                     
                 </div>
-                <div class="box-clase">
+                <div class="box-clase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <img src="../img/clases-3.jpg" alt="">
                     <div class="content">
-                        <h3>Kangoo Jump</h3>                       
+                        <h3>Kick Boxing</h3>                       
                         <a href="#" class="btn">Inscribirse</a>
                     </div>                
                 </div>
-                <div class="box-clase">
+                <div class="box-clase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <img src="../img/clases-4.jpg" alt="">
                     <div class="content">
-                        <h3>Kangoo Jump</h3>                       
+                        <h3>Stretching</h3>                       
                         <a href="#" class="btn">Inscribirse</a>
                     </div>               
                 </div>
-                <div class="box-clase">
+                <div class="box-clase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <img src="../img/clases-5.jpg" alt="">
                     <div class="content">
-                        <h3>Kangoo Jump</h3>                       
+                        <h3>Indoor Spining</h3>                       
                         <a href="#" class="btn">Inscribirse</a>
                     </div>                    
                 </div>
-                <div class="box-clase">
+                <div class="box-clase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <img src="../img/clases-6.jpg" alt="">
                     <div class="content">
-                        <h3>Kangoo Jump</h3>                       
+                        <h3>Body Pump</h3>                       
                         <a href="#" class="btn">Inscribirse</a>
                     </div>                     
                 </div>
-                <div class="box-clase">
+                <div class="box-clase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <img src="../img/clases-1.jpg" alt="">                    
                     <div class="content">
                         <h3>Kangoo Jump</h3>                       
+                        <a href="#" class="btn">Inscribirse</a>
+                    </div>       
+                </div>
+                <div class="box-clase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <img src="../img/clases-7.jpg" alt="">                    
+                    <div class="content">
+                        <h3>Axe Dancing</h3>                       
                         <a href="#" class="btn">Inscribirse</a>
                     </div>       
                 </div>
@@ -154,6 +165,10 @@
     </footer>
 
     <script src="../index.js" type="module"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     
 </body>
 </html>

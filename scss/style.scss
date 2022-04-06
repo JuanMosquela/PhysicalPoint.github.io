@@ -4,7 +4,7 @@
 // ESTILOS DE HEADER
 
 .header{
-    height: 70px;        
+    height: 60px;        
     position: fixed;
     top: 0; left: 0; right: 0;
     display:flex;
@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 8%;  
-    z-index: 100;    
+    z-index: 1000;    
      
     
     @media(max-width: 600px){
@@ -24,24 +24,27 @@
         padding: .8rem;
         font-weight: 600;
         border: 2px solid $orange;
+        z-index: 800;
 
         @media (max-width:600px){
-            font-size:.5rem;
+            
             padding:0.5rem;
              
         }
     }
 
     .menu{
-        display: none;  
+        
+        display: none; 
+        z-index: 999; 
         
         @media(max-width: 840px){
             display: block;        
             position: absolute;
-            top: 0;
-            right: 10px;
+            top: 1rem;
+            right: 1rem;
             padding: 1rem;
-            font-size: 2rem;
+            font-size: 2.5rem;
             cursor:pointer;
             color: $white;
         }
@@ -49,49 +52,57 @@
     
     
 
-    .lat-nav{
-        display: block;
-        position: absolute; 
-        width: 60%;
-        height: 480px;
-        background-color: $black;      
+    .lat-nav{  
+        position: absolute;
         top: 60px;
-        right: 0;
-        padding: 0.5rem 1rem;
-        transform: translateX(100%); 
+        left: 0;     
+        
+        
+        opacity: 0;        
+        width: 100%;       
+        background-color: $black;       
+        padding: 0rem 1rem;
+        transform: translateY(-100%); 
         border-radius: 0 0 0 10px;
         box-shadow: -1px 1px 78px -15px rgba(0,0,0,0.15); 
 
         @media(min-width: 840px){
             display: none;
         }
-
-        @media(max-width: 678px){
-            width: 80%;
-        }
+        
 
         &.active{
-            transform:translateX(0)
+             
+            transform:translateY(0%);
+            opacity:1
         }
         
-        li a{
-            font-weight: 600;
-            color: $white-letter;
-            border: $border 1px solid;
-            font-size: 1.4rem;
-            display: block;
-            margin: 2rem 0;
-            padding: 0.5rem;
+        ul{
+            padding: .5rem 0;
+            
 
-            &:hover{
-                color: $white;
-                border: 2px solid $white;
+            li a{
+                font-weight: 600;
+                color: $white-letter;
+                border: $border 1px solid;
+                font-size: $link;
+                display: block;
+                margin: 1rem 0;
+                padding: 0.5rem;
+    
+                &:hover{
+                    color: $white;
+                    border: 2px solid $white;
+                }
             }
         }
     }
 
     .nav-bar{
         display:flex; 
+        
+        align-items: center;
+        
         
         @media(max-width: 840px){
             display: none;
@@ -100,32 +111,17 @@
         li{    
             padding: 0 1.5rem;            
             font-weight: 600; 
-                       
-            .desplegable{   
-                display:none; 
-                position: absolute;      
-                background-color: $black;                 
-                
-                li{
-                    padding: 1rem 0.5rem;
-
-                    &:hover{
-                        background-color: $bg;
-                    }
-                }              
-            }
-
-            &:hover .desplegable{
-                display: block;
-            }
             
             a{
                 color: $white-letter;
+                font-size: $link;
 
                 &:hover{
                     color: $white;
                 }
-            }            
+            }
+                       
+                     
         }       
     } 
 
@@ -225,6 +221,7 @@
                 }
                 
                 span{
+                    font-size: $fs-h3;
                     color: $orange;
                     margin-bottom: 2rem;
                     font-weight: 800;
@@ -234,21 +231,18 @@
                     font-size: $fs-h1;
                     color: $white;
                     margin-top: 1rem;
-                    padding-bottom: $fs-h1;
+                    padding-bottom: 2rem;
+                    
 
                     @media(max-width: 978px){
-                        font-size: $fs-h3;
+                        font-size: $fs-h2;
                     }
                     @media(max-width: 678px){
-                        font-size: 2rem;
+                        font-size: $fs-h2;
                     }
                 }
 
-                .btn{
-                    @media(max-width:678px){
-                        display: none;
-                    }
-                }
+                
                 
             }
         }
@@ -308,7 +302,7 @@
         }
 
         img{
-            padding: 0.5rem;
+            padding: 1rem;
             width: 100%; 
 
         }
@@ -324,13 +318,18 @@
 
         .span{
             color: $orange;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             font-weight: 600;
         }
 
-        h3{
+        h2{
             padding: 1.2rem 0;
             text-align: left;
+            font-size: $fs-h2;
+        }
+
+        p{
+            font-size: $p;
         }
 
         .container-box{
@@ -350,17 +349,20 @@
                     padding: 0;
                 }
 
-                h4{
+                h3{
+                    font-size: $fs-h3;
                     color: $white;
-                    margin-bottom: 1rem;
+                    margin-bottom:$fs-h3;
                 }
 
                 i{
                     margin-right: 10px;
                     color: $orange;
+                    font-size: 1.2rem;
                 }
 
                 p{
+                    font-size: $p;
                     line-height: 1.8rem;
                 }
             }
@@ -393,8 +395,8 @@
                 padding-right: 0;
             }
 
-            h3{
-                font-size: $fs-h3;
+            h2{
+                font-size: $fs-h2;
                 color: $white;
 
                 @media(max-width: 500px){
@@ -404,6 +406,7 @@
             }
 
             p{
+                font-size: $p;
                 margin: 1rem 0 2rem;
                 line-height: 2rem;
 
@@ -449,7 +452,8 @@
                     cursor: pointer;
                 }
 
-                h4{
+                h3{
+                    font-size: $fs-h3;
                     margin-bottom: 12px;
                     color: $white;
                 }
@@ -458,6 +462,9 @@
                     color: $orange;
                     margin-bottom:15px;
                     font-size: 2rem;                   
+                }
+                p{
+                    font-size: $p;
                 }
             }
         }
@@ -490,7 +497,8 @@
         z-index: -1;
     }
 
-    h3{
+    h2{
+        font-size: $fs-h2;
         display: inline;    
         padding: 0.5rem 1rem;
         background-color: $black;    
@@ -513,8 +521,9 @@
         .card{
             position: relative;
             overflow: hidden;
-            min-width: 300px ;
-            margin: 1rem 0.5rem ; 
+            width: 240px ;
+            height: 400px;            
+            margin: 1rem; 
             border: 1px solid var(--border); 
             border-radius: 0.4rem; 
             box-shadow: -1px 1px 78px -15px rgba(0,0,0,0.15); 
@@ -525,8 +534,8 @@
             }
             
             .card-img{    
-                height: 20rem;
-                width: 300px; 
+                height: 25rem;
+                width: 100%; 
                 
                 img{
                     height: 100%;
@@ -540,8 +549,8 @@
                 background-color: $black;
                 color: $white;   
                 
-                h4{
-                    font-size: 1.2rem;
+                h3{
+                    font-size: $fs-h3;
                     text-align: center;    
                     margin-top: 2rem;                        
                 }
@@ -590,7 +599,8 @@
     display: flex;
     justify-content:center;
     align-items: center;
-    margin-bottom: 2rem;  
+    margin-bottom: 5rem;
+    
     
     .banner-content{    
 
@@ -608,7 +618,7 @@
 }
 
 .offers{    
-    min-height:80vh;              
+    min-height:60vh;              
     background-image: radial-gradient($black-light,$bg);
     display:flex;
     align-items: center; 
@@ -626,8 +636,8 @@
 
         .price{
             background:linear-gradient(130deg, $black 92%, transparent 90%);
-            max-height: 520px;
-            width: 340px;
+            height: 380px;
+            width: 280px;
             display: flex; 
             flex-direction: column;
             margin-bottom: 15px;
@@ -650,7 +660,7 @@
                 
 
                 h3{
-                    font-size:2rem;    
+                    font-size: $fs-h3;    
                     padding: 1rem 0;
                     text-align: center;                        
                 }
@@ -666,6 +676,7 @@
                 }
 
                 p{
+                    font-size: $p;
                     margin-bottom: 20px;
                     text-align: center;
                 }
@@ -673,7 +684,7 @@
                 button{  
                     display:block;  
                     margin:0 auto;
-                    font-size: 1rem;
+                    
                     margin-bottom: 20px;
                 }                
             }
@@ -682,7 +693,8 @@
                 padding: 1.5rem 1rem ;
 
                 li{
-                    padding: 0.5rem 0; 
+                    padding: 0.5rem 0;
+                    font-size: $link; 
                     
                     i{
                         margin-right: 15px;
@@ -698,7 +710,17 @@
 //ESTILOS DE TESTIMONIOS
 
 .testimonials{
-    background-color: $black-light;    
+    min-height: 50rem;
+    background-color: $black-light; 
+    
+    h3{
+        font-size: $fs-h3;
+        
+    }
+    p{
+        font-size: $p;
+        padding-top: 2rem;
+    }
 
     .container-testimonials{
         display: flex; 
@@ -775,6 +797,7 @@
         .slide{
             background-color:$black-light;
             margin-bottom: 2rem;
+            
     
             .post-img{
                 height: 20rem;    
@@ -806,12 +829,13 @@
                 }
     
                 h3{
-                    font-size:1.5rem;
+                    font-size:$fs-h3;
                     padding: 1rem 0;
                     color: $white;
                 }
     
                 p{
+                    font-size: $p;
                     letter-spacing: 1px;
                     margin-bottom: 1rem;
                 }
@@ -834,78 +858,131 @@
 
 //INICIAN ESTILOS DE FAQ
 
-.FAQ{   
-    min-height: 50rem;    
-    background-color: $bg;
-    margin-top: 5rem;
-
-    .title{
-        text-align: center;
-        margin-top: 5rem;
-        
-
-        h2{
-            font-size: 2.4rem;
-            margin-bottom: 2rem;
-            color: $white;
-            
-        }
-        p{
-            font-size: 1.2rem;
-        }
+.FAQ{    
+    background-color: $bg;  
+    display: flex; 
+    justify-content: center;    
+    align-items: center;
+    
+    @media (max-width:1000px){
+        flex-wrap: wrap;
+        padding: 0;
     }
     
-    
-    @media(max-width:600px){
-        padding: 0 2%;
-    }   
-    
-    .container{
-        flex-direction: column;
-         
-        @include d-flex;     
+    .img{ 
+        position: relative;
+        padding: 1rem;
+        z-index: 1;
+        @media (max-width:1000px){
+           margin-bottom: 5rem;
+        } 
 
-        .container-question{
-            background-color: $black-light;
-            margin: 1rem 0;
-            padding:  1.5rem 1rem;
-            cursor: pointer; 
-            transition: 0.3s;
-
-            &:hover{
-                color: $white;
-            }
-            
-            @media(max-width:600px){
-                padding: 1rem 0.5rem;
-            }
-
-            .question{
-                background-color: $black-light;                
-                display: flex;
-                justify-content: space-between;               
-            }
-
-            .answer{
-                text-align: justify;
-                padding-top: 1rem;
-                max-height: 0;
-                opacity: 0;
-                transition: 0.3 ease all;
-            }
+        &::before{
+            content: "";
+            position: absolute;    
+            z-index: -1;
+            width: 10rem;
+            height: 10rem;
+            background-color: $orange;
+            top: 0;
+            left: 0;
+            transition: .3s;
         }
 
-        .is-active{            
-            border: 1px solid $border;
+        &::after{
+            content: "";
+            position: absolute;    
+            z-index: -1;
+            width: 10rem;
+            height: 10rem;
+            background-color: $orange;
+            bottom: 0;
+            right: 0;
+            transition: 0.3s;
+        }
+        
+        
+          
+             
+        
+    }
 
-            .answer{
-                opacity: 1;
-                max-height: fit-content;                
+    
+    
+
+    .container-faq{        
+        display: flex;
+        justify-content: center; 
+        align-items: center;       
+        flex-direction: column; 
+        
+        
+        
+        
+        .container{            
+           display: flex;                                  
+           flex-direction: column;           
+
+           .border{                   
+    
+            h2{
+                font-size: $fs-h2;                
+                color: $white;
+                margin-bottom: 1.5rem;
+                
             }
-
-            .question i{
-                transform: rotate(180deg);
-                transition: .1s; 
+            p{
+                font-size: $p;
+            }
+        }
+             
+    
+            .container-question{
+                background-color: $black-light;
+                margin: 1rem 0;
+                padding:  1.5rem 1rem;
+                cursor: pointer; 
+                transition: 0.3s;
+    
+                &:hover{
+                    color: $white;
+                }
+                
+                @media(max-width:600px){
+                    padding: 1rem 0.5rem;
+                }
+    
+                .question{
+                    font-size: 1.6rem;
+                    background-color: $black-light;                
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;               
+                }
+    
+                .answer{
+                    font-size: $p;
+                    text-align: justify;
+                    width: 100%;                    
+                    max-height: 0;
+                    opacity: 0;
+                    transition: 0.3 ease all;
+                }
+            }
+    
+            .is-active{            
+                border: 1px solid $border;
+    
+                .answer{
+                    opacity: 1;
+                    max-height: fit-content; 
+                    padding-top: 1rem;              
+                }
+    
+                .question i{
+                    transform: rotate(180deg);
+                    transition: .1s; 
+                }
             }
         }
     }
@@ -920,17 +997,25 @@
 .shop{
     padding: 3rem 8%;
 
+    
+
     .container-grid{
         display: grid;
         justify-content:center;
         gap: 2rem;
-        grid-template-columns:repeat(auto-fill,minmax(20rem, .5fr));
+        grid-template-columns:repeat(auto-fit,minmax(20rem, 1fr));
 
         .card{
             background-color:$black;
             border:$border 1px solid;            
             text-align: center; 
-            padding: 1rem;           
+            padding: 1rem; 
+            
+            @media(max-width:500px){
+                display: flex;
+                height: 200px;
+                
+            }
 
             .product{
                 position: relative; 
@@ -958,9 +1043,12 @@
                     top: 0;
                     right: 0;
                     font-size: 1.6rem;
-                    padding: 1rem;
+                    padding: 1rem;                   
+                    color: $white;
                     
-                    color: $white;                   
+                    @media(max-width: 500px){
+                        display: none;
+                    }
                 }                   
             }
 
@@ -970,7 +1058,7 @@
 
                 h4{
                     color: $white;
-                    font-size: 1rem;
+                    font-size: 1.4rem;
                     margin-bottom:1rem;                  
                 }
 
@@ -1017,50 +1105,59 @@
     }
 
     .container-clases{
-        margin-top: 4rem;
+        margin-top: 6rem;
 
         .box-clase{
             height: 30rem;
             width: 100%;
             overflow: hidden;
             position: relative;
-            @include d-flex;
-            
-            transition: 1s;      
+            @include d-flex;            
+                
 
             img{
                 height: 100%;
                 width: 100%;
-                object-fit: cover;
-                              
+                object-fit: cover;                              
             }
 
             .content{
-                position: absolute; 
-                z-index: 10; 
-                opacity: 0;                            
-                
+                position: absolute;                
+                opacity: 0;  
+                text-align: center;             
 
                 h3{   
                  font-size: 3rem;                    
                  font-weight: 600;
                  padding: 2rem ;
                  color: $white;
-                }  
-
+                }    
                 
+            }      
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(rgba(0,0,0,.1) 50%, rgba(0,0,0,.5));
+                opacity: 0;               
+                z-index: 1;
+                transition: .3s;   
                 
-                
-             }                                     
+            }
 
-                   
+            &:hover::before{
+                opacity: 1;
+            }          
             
-
-            
-
-            
+            &:hover .content {
+                opacity: 1;
+                z-index: 20;
+            }            
         }
-        
     }
 }
 
@@ -1073,6 +1170,7 @@
     align-items: center;
     min-height: 90vh;
     padding: 5rem 8%;
+    margin-top: 5rem;
 
     @media(max-width:600px){
         padding: 5rem 2%;
@@ -1080,8 +1178,7 @@
     
     
     .row{
-        display: flex;        
-        justify-content:center;
+        @include d-flex;
 
         @media(max-width:1200px){
             flex-wrap: wrap;
@@ -1122,6 +1219,7 @@
                         margin: 15px 0px ; 
     
                         span{
+                            font-size: 1.2rem;
                             color: $white;
                             display: block;
                             margin-bottom: 10px;
@@ -1150,7 +1248,7 @@
 
                         .inputbox-flex{
                             width: 100%;                           
-                            font-size: 15px;
+                            font-size: 1.2rem;
                             text-transform: none;  
                             
                             span{
@@ -1216,6 +1314,7 @@ footer{
 
         div{
             padding: 1rem 0;
+            max-width: 400px;
 
             @media (max-width: 600px ){            
                 font-size: 1rem; 
@@ -1223,13 +1322,14 @@ footer{
             }
 
             h4{
-                font-size: 1rem;
+                font-size: 1.5rem;
                 margin-bottom: 12px;
                 color: $white;
             }
 
             p{
-                line-height:  1.5rem;
+                 font-size: $p;
+                line-height:  1.8rem;
 
                 &:hover{
                     color: $white;
@@ -1265,6 +1365,7 @@ footer{
     }
 
     .copyright{
+        font-size: $p;
         text-align: center;
     }
 }

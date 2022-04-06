@@ -1,6 +1,6 @@
 export default function header(){
 
-    window.addEventListener('scroll', (e) =>{
+    window.addEventListener('scroll', () =>{
         const nav = document.querySelector('.lat-nav');
         const header = document.querySelector('.header');        
         header.classList.toggle('active', window.scrollY > 0); 

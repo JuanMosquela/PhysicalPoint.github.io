@@ -4,8 +4,8 @@ import faq from './js/faq.js';
 
 document.addEventListener('DOMContentLoaded', (e) => {
     latNav('.menu', '.lat-nav' );
-    header('.header');
-    faq('.container .container-question')
+    header();
+    faq()
 })
 
 

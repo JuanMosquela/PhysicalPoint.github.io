@@ -1,16 +1,14 @@
-export default function latNav(){
+export default function latNav(panelBtn,panel){   
 
-    const openClose=document.querySelector('.menu');   
-    const nav = document.querySelector('.lat-nav');
-    
+    document.addEventListener('click',(e)=>{        
 
-    openClose.addEventListener('click',(e)=>{
+        if(e.target.matches(panelBtn) || (e.target.matches(`${panelBtn} *`)) ){
+            document.querySelector(panel).classList.toggle('active');
+            document.querySelector(panelBtn).classList.toggle('active');
+            document.querySelector('.header').classList.add('active');
+        }
+
         
-
-        const header = document.querySelector('.header');
-
-        nav.classList.toggle('active');
-        header.classList.add('active');
         
 
         

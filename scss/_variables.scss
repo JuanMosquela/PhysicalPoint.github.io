@@ -5,14 +5,15 @@ $white:#FFF;
 $grey: #F0F2F5;
 $border:#c8ccd1;
 $white-letter:rgba(255, 255, 255, 0.6);        
-$orange:#faba43; 
+$orange:#faba42; 
 $whatsapp:#4EC95C;
 
-$fs-h1: 3rem;
-$fs-2: 2.6rem;
-$fs-h3: 2.4rem;
-$fs-h5: 1.8rem;
-
+$fs-h1: 4rem;
+$fs-h2: 3.4rem;
+$fs-h3: 1.8rem;
+$fs-h5: 2rem;
+$p: 1.4rem;
+$link: 1.6rem;
 
 @mixin d-flex{
     display: flex;
