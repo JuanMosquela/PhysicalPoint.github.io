@@ -341,7 +341,8 @@ p {
         flex-wrap: wrap; } }
     .servicios .servicios-container .content-servicios-left {
       flex: 1 1 40rem;
-      padding-right: 2rem; }
+      padding-right: 5rem;
+      text-align: justify; }
       @media (max-width: 500px) {
         .servicios .servicios-container .content-servicios-left {
           padding-right: 0; } }
@@ -367,8 +368,7 @@ p {
       display: grid;
       gap: 1.2rem;
       grid-template-columns: repeat(3, 1fr);
-      justify-content: center;
-      margin-top: 2rem; }
+      justify-content: center; }
       @media (max-width: 978px) {
         .servicios .servicios-container .content-servicios-right {
           grid-template-columns: 1fr 1fr; } }
@@ -601,7 +601,8 @@ p {
             font-size: 2rem;
             padding: 0; } }
       .testimonials .container-testimonials .box-testimonial .content-testimonials {
-        padding: 0.5rem; }
+        padding: 0.5rem;
+        text-align: justify; }
         .testimonials .container-testimonials .box-testimonial .content-testimonials p {
           padding: 1rem 0;
           font-size: 1.4rem;
@@ -668,7 +669,8 @@ p {
   background-color: #1F2023;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 5rem; }
   @media (max-width: 1000px) {
     .FAQ {
       flex-wrap: wrap;
@@ -709,18 +711,22 @@ p {
   .FAQ .container-faq {
     display: flex;
     flex: 1 1 40rem;
-    justify-content: center;
     flex-direction: column;
     max-width: 700px; }
     .FAQ .container-faq .container {
       display: flex;
       flex-direction: column; }
-      .FAQ .container-faq .container .border h2 {
-        font-size: 3.4rem;
-        color: #FFF;
-        margin-bottom: 1.5rem; }
-      .FAQ .container-faq .container .border p {
-        font-size: 1.4rem; }
+      .FAQ .container-faq .container .faq-title {
+        text-align: center;
+        margin-bottom: 2rem; }
+        .FAQ .container-faq .container .faq-title span {
+          font-size: 2rem; }
+        .FAQ .container-faq .container .faq-title h2 {
+          font-size: 3.4rem;
+          color: #FFF;
+          padding: 2rem 0; }
+        .FAQ .container-faq .container .faq-title p {
+          font-size: 1.4rem; }
       .FAQ .container-faq .container .container-question {
         background-color: #27282D;
         margin: 1rem 0;

@@ -381,8 +381,10 @@
     .servicios-container{
         display: flex;
         justify-content:space-around;
-        align-items:center;
+        align-items: center;
+        
         padding: 2rem 0;
+        
 
         @media(max-width: 1400px){
             flex-wrap: wrap;
@@ -390,7 +392,8 @@
 
         .content-servicios-left{
             flex: 1 1 40rem;
-            padding-right: 2rem;
+            padding-right: 5rem;
+            text-align: justify;
 
             @media(max-width:500px){
                 padding-right: 0;
@@ -428,7 +431,12 @@
             gap: 1.2rem;
             grid-template-columns: repeat(3, 1fr);    
             justify-content: center; 
-            margin-top: 2rem;  
+            
+            
+            
+            
+            
+             
                      
 
             @media(max-width: 978px){
@@ -448,6 +456,9 @@
                 border: 1px solid $white-letter;
                 border-radius: 15px; 
                 text-align: center;
+                
+               
+                
                             
 
                 &:hover{
@@ -785,6 +796,7 @@
 
             .content-testimonials{    
                 padding: 0.5rem;
+                text-align: justify;
                              
 
                 p{
@@ -899,7 +911,8 @@
     background-color: $bg;  
     display: flex; 
     justify-content: center;  
-    align-items: center;    
+    align-items: center; 
+    margin-top: 5rem;   
     
     @media (max-width:1000px){
         flex-wrap: wrap;
@@ -966,7 +979,7 @@
     .container-faq{        
         display: flex;
         flex: 1 1 40rem;
-        justify-content: center;              
+                      
         flex-direction: column; 
         max-width: 700px;
         
@@ -976,20 +989,34 @@
         
         .container{            
            display: flex;                                  
-           flex-direction: column;           
+           flex-direction: column; 
+           
+           
+                    
 
-           .border{                   
+           .faq-title{
+               text-align: center;
+               margin-bottom: 2rem;
+              
+            span{
+                font-size: 2rem;
+                
+            }                   
     
             h2{
-                font-size: $fs-h2;                
+                font-size: $fs-h2;
+                                
                 color: $white;
-                margin-bottom: 1.5rem;
+                padding: 2rem 0;
                 
             }
             p{
                 font-size: $p;
             }
-        }
+           }
+               
+            
+        
              
     
             .container-question{
