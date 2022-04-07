@@ -236,7 +236,8 @@ p {
         font-size: 4rem;
         color: #FFF;
         margin-top: 1rem;
-        padding-bottom: 2rem; }
+        padding-bottom: 2rem;
+        letter-spacing: 1px; }
         @media (max-width: 978px) {
           .hero .hero-slider .swiper-slide .hero-content h1 {
             font-size: 3.4rem; } }
@@ -481,18 +482,28 @@ p {
 
 .banner {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(../img/banner.jpg);
+  background-attachment: fixed;
   height: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5rem; }
-  .banner .banner-content h3 {
-    color: #FFF;
-    font-size: 3rem;
-    padding: 1.5rem 0; }
-    @media (max-width: 600px) {
-      .banner .banner-content h3 {
-        font-size: 2rem; } }
+  .banner .banner-content {
+    text-align: center; }
+    .banner .banner-content span {
+      font-size: 1.2rem; }
+    .banner .banner-content h3 {
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: 3.2rem;
+      padding: 1.5rem 0;
+      letter-spacing: 1px; }
+      @media (max-width: 600px) {
+        .banner .banner-content h3 {
+          font-size: 2rem; } }
+    .banner .banner-content p {
+      font-size: 1.4rem;
+      margin-bottom: 2rem; }
 
 .offers {
   min-height: 60vh;
@@ -511,7 +522,7 @@ p {
     .offers .flex-container .price {
       background: linear-gradient(130deg, #000 92%, transparent 90%);
       height: 380px;
-      width: 280px;
+      width: 300px;
       display: flex;
       flex-direction: column;
       margin-bottom: 15px;
@@ -552,28 +563,36 @@ p {
 
 .testimonials {
   min-height: 50rem;
-  background-color: #27282D; }
-  .testimonials h3 {
-    font-size: 1.8rem; }
-  .testimonials p {
-    font-size: 1.4rem;
-    padding-top: 2rem; }
+  background-color: #1F2023;
+  padding: 0;
+  margin-bottom: 3rem; }
+  .testimonials .testimonials-title {
+    padding: 0 8%;
+    margin-bottom: 3rem; }
+    .testimonials .testimonials-title span {
+      font-size: 1.2rem; }
+    .testimonials .testimonials-title h2 {
+      font-size: 3.4rem;
+      padding: 1rem 0;
+      color: #FFF; }
+      .testimonials .testimonials-title h2 span {
+        font-size: 3.4rem; }
+    .testimonials .testimonials-title p {
+      font-size: 1.4rem;
+      margin-bottom: 2rem; }
   .testimonials .container-testimonials {
     display: flex;
     justify-content: center;
-    padding: 1rem 0;
-    background-color: #27282D;
-    box-shadow: -1px 1px 78px -15px rgba(0, 0, 0, 0.15); }
+    gap: 2rem;
+    padding: 0 8%; }
     @media (max-width: 1200px) {
       .testimonials .container-testimonials {
         flex-wrap: wrap; } }
     .testimonials .container-testimonials .box-testimonial {
       padding: 1rem;
-      margin: 0.5rem 1rem;
       border-radius: 1rem 0 0;
       min-width: 350px;
-      background-color: #1F2023;
-      border-bottom: 2px solid #c8ccd1; }
+      background: linear-gradient(130deg, #27282D 93%, transparent 90%); }
       .testimonials .container-testimonials .box-testimonial i {
         font-size: 3rem;
         color: #faba42; }
@@ -584,9 +603,9 @@ p {
       .testimonials .container-testimonials .box-testimonial .content-testimonials {
         padding: 0.5rem; }
         .testimonials .container-testimonials .box-testimonial .content-testimonials p {
-          letter-spacing: 1px;
-          line-height: 1.8rem;
-          margin-bottom: 1.2rem; }
+          padding: 1rem 0;
+          font-size: 1.4rem;
+          line-height: 1.8rem; }
         .testimonials .container-testimonials .box-testimonial .content-testimonials .profile {
           display: flex;
           align-items: center;
@@ -599,7 +618,7 @@ p {
             text-transform: uppercase;
             color: #FFF;
             font-size: 1.2rem;
-            margin-left: 1rem; }
+            margin-left: 2rem; }
 
 .blog {
   margin-bottom: 2rem; }
@@ -829,7 +848,9 @@ p {
           font-size: 3rem;
           font-weight: 600;
           padding: 2rem;
-          color: #FFF; }
+          color: #FFF;
+          text-transform: uppercase;
+          letter-spacing: 1px; }
       .clases .container-clases .box-clase::before {
         content: "";
         position: absolute;

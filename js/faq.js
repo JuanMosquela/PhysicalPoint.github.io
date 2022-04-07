@@ -6,12 +6,6 @@ export default function faq(){
         el.addEventListener('click', ()=>{
             el.classList.toggle('is-active');        
         })                
-    });
-            
-
-    
-        
-
-        
+    });        
       
 }

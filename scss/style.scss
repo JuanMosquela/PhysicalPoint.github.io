@@ -232,6 +232,7 @@
                     color: $white;
                     margin-top: 1rem;
                     padding-bottom: 2rem;
+                    letter-spacing: 1px;
                     
 
                     @media(max-width: 978px){
@@ -597,6 +598,7 @@
 
 .banner{
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4) ) ,url(../img/banner.jpg);
+    background-attachment: fixed;
     height: 25rem;
     display: flex;
     justify-content:center;
@@ -604,18 +606,29 @@
     margin-bottom: 5rem;
     
     
-    .banner-content{    
+    .banner-content{ 
+        text-align: center;
+        
+        span{
+            font-size: 1.2rem;
+        }
 
         h3{
             color: $white;
-            font-size:3rem;
+            text-transform: uppercase;
+            font-size:3.2rem;
             padding: 1.5rem 0;
+            letter-spacing: 1px;
 
             @media (max-width: 600px) {
                 font-size: 2rem;
                 
             }
-        }          
+        } 
+        p{
+            font-size: $p;
+            margin-bottom: 2rem;
+        }         
     }
 }
 
@@ -639,7 +652,7 @@
         .price{
             background:linear-gradient(130deg, $black 92%, transparent 90%);
             height: 380px;
-            width: 280px;
+            width: 300px;
             display: flex; 
             flex-direction: column;
             margin-bottom: 15px;
@@ -713,35 +726,52 @@
 
 .testimonials{
     min-height: 50rem;
-    background-color: $black-light; 
+    background-color: $bg; 
+    padding: 0;
+    margin-bottom: 3rem;
     
-    h3{
-        font-size: $fs-h3;
+    
+    .testimonials-title{
         
-    }
-    p{
-        font-size: $p;
-        padding-top: 2rem;
+        padding: 0 8%;
+        margin-bottom: 3rem;
+        span{
+            font-size: 1.2rem;
+        }
+        h2{
+            font-size: $fs-h2;
+            padding: 1rem 0;
+            color: $white;
+            span{
+                font-size: $fs-h2;
+            }
+            
+        }
+        p{
+            font-size: $p;
+            margin-bottom: 2rem;
+            
+        }
     }
 
     .container-testimonials{
         display: flex; 
         justify-content:center;
-        padding:  1rem 0 ;    
-        background-color: $black-light;
-        box-shadow: -1px 1px 78px -15px rgba(0,0,0,0.15);
+        gap: 2rem;
+        padding: 0 8%;    
+        
+        
 
         @media(max-width:1200px){
             flex-wrap: wrap;
         }
 
         .box-testimonial{
-            padding: 1rem;
-            margin: 0.5rem 1rem;
+            padding: 1rem;          
             border-radius: 1rem 0 0;    
             min-width: 350px; 
-            background-color: $bg; 
-            border-bottom: 2px solid $border; 
+            background: linear-gradient(130deg, $black-light 93%, transparent 90%); 
+             
 
             i{
                 font-size:3rem;    
@@ -754,12 +784,14 @@
             }
 
             .content-testimonials{    
-                padding: 0.5rem;               
+                padding: 0.5rem;
+                             
 
                 p{
-                    letter-spacing: 1px;
+                 padding: 1rem 0;
+                    font-size: $p;                    
                     line-height: 1.8rem;
-                    margin-bottom: 1.2rem;
+                    
                 }
 
                 .profile{
@@ -777,7 +809,7 @@
                         text-transform: uppercase;
                         color: $white;
                         font-size: 1.2rem;
-                        margin-left: 1rem;
+                        margin-left: 2rem;
                         
                     }
                 }
@@ -1152,6 +1184,8 @@
                  font-weight: 600;
                  padding: 2rem ;
                  color: $white;
+                 text-transform: uppercase;
+                 letter-spacing: 1px;
                 }    
                 
             }      
