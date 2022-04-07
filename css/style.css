@@ -992,15 +992,17 @@ footer {
         line-height: 1.8rem; }
         footer .flex-container div p:hover {
           color: #FFF; }
-      footer .flex-container div i {
-        padding: 1rem 0;
-        font-size: 2.2rem;
-        margin-right: 1rem; }
-        @media (max-width: 600px) {
-          footer .flex-container div i {
-            font-size: 1rem; } }
-        footer .flex-container div i:hover {
-          color: #FFF; }
+      footer .flex-container div a {
+        color: #FFF; }
+        footer .flex-container div a i {
+          padding: 1rem 0;
+          font-size: 2.2rem;
+          margin-right: 1rem; }
+          @media (max-width: 600px) {
+            footer .flex-container div a i {
+              font-size: 1rem; } }
+          footer .flex-container div a i:hover {
+            color: #faba42; }
       footer .flex-container div input {
         font-size: 1rem;
         padding: 0.5rem; }

@@ -1425,17 +1425,20 @@ footer{
                 }
             }
 
-            i{
-                padding: 1rem 0;
-                font-size: 2.2rem;
-                margin-right: 1rem; 
-
-                @media (max-width: 600px ){            
-                    font-size: 1rem;                     
-                }               
-
-                &:hover{
-                    color: $white;
+            a{
+                color: $white;
+                i{
+                    padding: 1rem 0;
+                    font-size: 2.2rem;
+                    margin-right: 1rem; 
+    
+                    @media (max-width: 600px ){            
+                        font-size: 1rem;                     
+                    }               
+    
+                    &:hover{
+                        color: $orange;
+                    }
                 }
             }
 
