@@ -1,11 +1,13 @@
 import latNav from './js/burger.js';
 import header from './js/header.js';
 import faq from './js/faq.js';
+import scrollToTop from './js/scroll.js';
 
 document.addEventListener('DOMContentLoaded', (e) => {
     latNav('.menu', '.lat-nav' );
     header();
-    faq()
+    faq();
+    scrollToTop('.scroll-btn');
 })
 
 
