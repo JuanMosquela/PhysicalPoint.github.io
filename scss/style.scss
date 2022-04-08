@@ -132,14 +132,14 @@
         display: flex;
         justify-content:center;
         align-items: center;
-        font-size:2.4rem;
+        font-size:4rem;
         right: 2rem; 
         bottom: 8%;
         color: $white;
         background-color: $whatsapp;
         border-radius: 100%;
-        width: 4rem;
-        height: 4rem;
+        width: 7rem;
+        height: 7rem;
         box-shadow: 0 1px 10px rgba(0,0,0,0.3);
         z-index: 200;
     
@@ -258,8 +258,8 @@
 }
 .scroll-btn{
     position: fixed;
-    right: 3rem;
-    bottom: 2%;
+    right: 4rem;
+    bottom: 3%;
     font-size: 2.4rem;
     @include d-flex;
     color: $white-letter;
