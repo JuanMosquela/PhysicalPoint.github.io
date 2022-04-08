@@ -1141,6 +1141,7 @@
                     display: block;
                     width: 100%;
                     height: 100%;
+                    object-fit: cover;
                     transition: .3s;
 
                     &:hover{
@@ -1165,7 +1166,7 @@
 
             .product-info{    
                 text-align: center; 
-                margin: auto 0;
+                margin: auto 0rem;
 
                 h4{
                     color: $white;
