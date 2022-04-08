@@ -5,7 +5,7 @@ export default function scrollToTop(btn){
 
         const scrollY = document.documentElement.scrollTop;        
 
-        if(scrollY > 600){
+        if(scrollY > 3000){
             scrollBtn.classList.remove('hidden')        
            
         }
